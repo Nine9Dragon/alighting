@@ -1,0 +1,197 @@
+body{
+    background-color:#f1f1f1;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+.user_header{
+    overflow: hidden;
+}
+.user_header_con{
+    margin: 0 auto;
+    padding: 24px 0;
+    width: 1000px;
+    overflow: hidden;
+}
+.user_header_con a{
+    float: left;
+}
+.header_title{
+    padding-left: 25px;
+    display: block;
+    float: left;
+    font-size: 24px;
+    padding-top: 10px;
+
+}
+
+
+.login_footer{
+    font-size: 12px;
+    padding: 30px 0;
+    color: #313131;
+    text-align: center;
+}
+.login_footer>.footer_msg>span{
+    padding-right: 10px;
+}
+.footer_copyright{
+    padding-top: 20px;
+}
+.user_main{
+    padding-top: 60px;
+    background-color: #2C78C6;
+    height: 540px;
+}
+.wrapper{
+    width: 1000px;
+    min-height: 450px;
+    margin: 10px auto;
+}
+.login_ad{
+    padding: 70px 0 0 30px;
+}
+.login_ino{
+    padding: 19px;
+    width: 310px;
+    overflow: hidden;
+    background: #fff;
+}
+.left_font{
+    font-size: 18px;
+    color: #535353;
+}
+.reg_a{
+    float: right;
+    font-size: 14px;
+    color:#000;
+}
+.err_tip{
+    position: relative;
+    margin: 20px 0 10px;
+    padding-left:20px;
+    font-size: 12px;
+    line-height: 25px;
+    height: 25px;
+    background: #FFF6D2;
+    border: 1px solid #E1C7AB;
+    color: #959595;
+}
+.err_tip span{
+    font-size: 12px;
+    text-align: center;
+}
+.login_ino .inp{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0 10px 50px;
+    margin-bottom: 20px;
+}
+.login_ino div label{
+    font-size:12px;
+    color:#959595;
+    margin-left:5px;
+}
+.check_in{
+    padding:0 0 15px 0;
+}
+.login_ino div a{
+    float: right;
+    font-size: 10px;
+    color: #000;
+}
+.login_btn{
+    width: 310px;
+    height: 45px;
+    font-size: 24px;
+    color:#FFF;
+    background: #00B7EE;
+    border: 0;
+    outline: 0;
+}
+.thrd_login{
+    margin: 10px 0;
+    font-size:12px;
+    color:#959595;
+}
+/*登录*/
+.reg_box{
+    padding: 60px 80px;
+}
+.two{
+    background-color: #FFF;
+}
+.reg_left label{
+    float: left;
+    width: 90px;
+    height: 40px;
+    padding-right: 10px;
+    text-align: right;
+    line-height: 40px;
+    font-size: 12px;
+}
+.reg_left{
+    float: left;
+    display: inline;
+
+}
+.reg_left input{
+    width: 298px;
+    height: 38px;
+    padding-left: 10px;
+}
+.reg_left div{
+    min-height: 40px;
+}
+.reg_left .err_font{
+    margin: 0;
+    width: 320px;
+    min-height: 24px;
+    padding-left: 100px;
+}
+.reg_left .phone_msg{
+    width: 120px;
+}
+.phone_msg_btn{
+    font-size: 12px;
+    margin-left:10px;
+    height: 42px;
+    line-height: 38px;
+    border: 1px solid #DCDCDC;
+    background: #f1f1f1;
+    padding:0 10px;
+}
+.reg_div{
+    padding-left: 100px;
+}
+.reg_btn{
+    width: 310px;
+    height: 45px;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #00B7EE;
+    color: #FFF;
+    font-size: 24px;
+}
+.reg_left .reg_div_a{
+    font-size: 12px;
+    padding:10px 0 0 100px;
+
+}
+.reg_left .reg_div_a a{
+    color: #005aa0;
+}
+.reg_right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
