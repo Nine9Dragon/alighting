@@ -335,4 +335,75 @@ body{
 }
 
 
-
+.news_brand_masonry{
+    padding: 12px 0;
+}
+.news_brand_masonry li{
+    float: left;
+    width: 222px;
+    height: 284px;
+    margin: 8px 8px;
+}
+.news_brand_masonry .brand_masonry-box .news_brand_pic p{
+    font-weight: bold;
+    text-align: center;
+}
+.news_brand_pic{
+    height: 190px;
+    background: #FFF;
+}
+.news-brand-pic-box{
+    display: block;
+    width: 190px;
+    height: 90px;
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.news_brand_masonry li:hover .favorite_ico{
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FFF;
+    width: 72px;
+    height: 28px;
+    background: url(https://www.alighting.com//statics/images/brand/brand-sprite.png)0 -345px no-repeat;
+}
+.brand_masonry_desc{
+    padding: 10px 0;
+    background:#f3f3f3;
+}
+.brand_masonry_desc p{
+    padding: 0 5px;
+    color:#999;
+    line-height: 22px;
+}
+.brand_masonry_desc a{
+    color:#999; 
+}
+.brand_masonry_text{
+    display: none;
+}
+.news_brand_masonry li:hover{
+    position: relative;
+    z-index: 9;
+}
+.news_brand_masonry li:hover .brand_masonry-box{
+    border: 2px solid #F00;
+    background:#FFF;
+    height: 410px;
+}
+.news_brand_masonry li:hover .brand_masonry_desc{
+    display: none;
+}
+.news_brand_masonry li:hover .brand_masonry_text{
+    display: block;
+    padding: 0 10px;
+    color:#999;
+    line-height: 20px;
+}
