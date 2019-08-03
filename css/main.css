@@ -247,6 +247,11 @@ body{
     background: #313131;
     color: #FFF;
 }
+
+.brand_box{
+    padding: 10px;
+}
+
 .left_arrow{
     float: left;
     margin-right: 6px;
@@ -262,10 +267,12 @@ body{
     float: left;
     width: 1046px;
     height: 156px;
+    background:url(https://www.alighting.com/statics/images/brand/scroll-bg.gif) no-repeat;
 }
 .slide-hoder{
     float: left;
     width: 50000px;
+    margin: 0 28px;
 }
 .slide-hoder ul{
     float: left;
@@ -286,15 +293,46 @@ body{
     text-align: center;
     width: 180px;
     height: 100px;
-    line-height: 100px;
     overflow: hidden;
     background: #fff;
 }
 .brand-descrition{
-    display: none;
+    display: none;  
 }
-
-
+.brand-descrition span{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+.brand-descrition p{
+    height: 230px;
+    color:#666;
+    word-break: break-all;
+    line-height: 23 px;  
+}
+.right_arrow{
+    float: left;
+    margin-right: 6px;
+}
+.right_arrow a{
+    display: block;
+    width: 61px;
+    height: 158px;
+    background:url(https://www.alighting.com/statics/images/brand/brand-sprite.png) no-repeat;
+    background-position: 0px -184px;
+}
+.slide-show-box .slide-hoder ul li:hover{
+    position: relative;
+    z-index: 5;
+    height:355px;
+    background:#FFF;
+    border: 2px solid #F00;
+}
+.slide-show-box .slide-hoder ul li:hover .brand-descrition{
+    display: block;
+    padding: 0 10px;    
+}
 
 
 
