@@ -20,4 +20,7 @@ a:hover{
 a:active{
     color: deepskyblue;
 }
+.bg-white{
+    background:#FFF;
+}
 

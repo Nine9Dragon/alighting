@@ -146,7 +146,6 @@ body{
 .friendlinks{
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #f2f2f2;
 }
 .friend-first{
     width: 80px !important;
@@ -198,7 +197,7 @@ body{
     text-align: center;
 }
 .brand_bg{
-    background: #EDEDED;
+    background: #EDEDED url("https://www.alighting.com//statics/images/brand/brand-bg.png") center 0 no-repeat;
 }
 .brand_wrapper{
     width: 1200px;
@@ -406,4 +405,14 @@ body{
     padding: 0 10px;
     color:#999;
     line-height: 20px;
+}
+.clr{
+    border-top: 2px solid #f3f3f3;
+    margin-top:20px;    
+}
+.mx-15 span{
+    margin:0 10px;
+}
+.footer_copyright p{
+    margin-top: 20px;
 }
