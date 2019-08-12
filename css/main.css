@@ -45,10 +45,34 @@ body{
     font-size: 12px;
 }
 .top-link-right-ul li{
+    position: relative;
     float: left;
     width: auto;
     height: 32px;
     line-height: 32px;
+}
+.top-link-right-ul li:nth-child(2):hover img{
+    content:url("../image/上箭头.png");
+}
+.top-link-right-ul li:nth-child(3):hover img:nth-child(2){
+    content:url("../image/上箭头.png");
+}
+.ui-corner-all{
+    display: none;
+    width: 85px;
+    text-align: center;
+}
+.ui-corner-all li{
+    height: 24px;
+    width: 85px;
+    line-height: 24px;
+    background: #FFF;
+}
+.top-link-right-ul li:nth-child(2):hover ul{
+    display: block;
+    z-index: 10;
+    background: #FFF;
+   
 }
 .top-link-right-ul a{
     color: #909090;
@@ -176,7 +200,7 @@ body{
     text-indent: 20px;
     float: left;
     color: #FFF;
-    background: #0464b5;
+    background: url(https://www.alighting.com//statics/images/new-index/new-index.png) no-repeat 190px -280px #0464b5;
 }
 .navcon ul a{
     display: block;
