@@ -51,28 +51,50 @@ body{
     height: 32px;
     line-height: 32px;
 }
-.top-link-right-ul li:nth-child(2):hover img{
+.top-link-right-ul .second_li:hover{
+    box-sizing: border-box;
+    position: relative;
+    background: #FFF;
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+}
+.top-link-right-ul .second_li:hover img{
     content:url("../image/上箭头.png");
 }
-.top-link-right-ul li:nth-child(3):hover img:nth-child(2){
+.top-link-right-ul .third_li:hover img:nth-child(2){
     content:url("../image/上箭头.png");
 }
 .ui-corner-all{
     display: none;
-    width: 85px;
-    text-align: center;
+
 }
 .ui-corner-all li{
     height: 24px;
-    width: 85px;
+    width: 100%;
     line-height: 24px;
     background: #FFF;
 }
-.top-link-right-ul li:nth-child(2):hover ul{
+.second_li .ui-corner-all li:hover{
+    background: rgb(242, 249, 255);
+}
+.second_li .ui-corner-all li:hover a{
+    color: #1b7dd0;
+}
+.second_li{
+    margin-right: 10px;
+}
+.top-link-right-ul .second_li:hover ul{
+    position: absolute;
+    top: 30px;
+    left: -1px;
     display: block;
     z-index: 10;
+    width: 90px;
+    text-align: center;
     background: #FFF;
-   
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
 }
 .top-link-right-ul a{
     color: #909090;
