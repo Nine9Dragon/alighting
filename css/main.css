@@ -66,7 +66,6 @@ body{
 }
 .ui-corner-all{
     display: none;
-
 }
 .ui-corner-all li{
     height: 24px;
@@ -79,9 +78,6 @@ body{
 }
 .second_li .ui-corner-all li:hover a{
     color: #1b7dd0;
-}
-.second_li{
-    margin-right: 10px;
 }
 .top-link-right-ul .second_li:hover ul{
     position: absolute;
@@ -96,6 +92,47 @@ body{
     border-right: 1px solid #c3c3c3;
     border-bottom: 1px solid #c3c3c3;
 }
+.top-link-right-ul .third_li{
+    padding-left:5px; 
+}
+.top-link-right-ul .third_li:hover a{
+    position: relative;
+    display: block;
+    /* width: 100%; */
+    height: 100%;
+    padding-left:10px; 
+    background: #FFF;
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 3px solid #fff;
+    z-index: 11;
+}
+.top-link-right-ul .third_li:hover ul{
+    display: block;
+}
+.top-link-right-ul .third_li:hover ul li{
+    position: relative;
+}
+.top-link-right-ul .third_li:hover ul li .shoping-car-img{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 240px;
+    height: 100px;
+    background: #FFF;
+    border: 1px solid #c3c3c3;
+    z-index: 10;
+    padding-top:10px;
+    padding-left: 40px;
+}
+.shoping-car-img span{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    background:url("https://www.alighting.com/statics/images/new-index/new-index.png") no-repeat;
+    background-position: -210px -500px; 
+    margin: 10px 0;
+}
 .top-link-right-ul a{
     color: #909090;
     padding: 0 10px;
@@ -109,7 +146,7 @@ body{
     position: relative;
     width: 13px;
     height: 13px;
-    margin-right: 2px;
+    margin:0 2px;
 }
 .logo-box{
     padding: 15px 0;
