@@ -13,6 +13,10 @@ body{
     width: 1190px;
     margin: 0 auto;
 }
+.w1230{
+    width: 1230px;
+    margin: 0 auto;
+}
 .left{
     float: left;
     display: inline;
@@ -165,6 +169,34 @@ body{
 .head-search-box span{
     margin-right: 20px;
     color: #999;
+}
+.near-hot-search{
+    position: absolute;
+    width: 410px;
+    height: 0;
+    background:#FFF;
+    z-index: 999;
+    overflow: hidden;
+}
+.input-keyword-on{
+    height: 200px;
+    border: 2px solid #1b7dd0;
+    border-top: 0;
+    transition: height .2s linear;
+}
+.near-hot-search h5{
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.near-hot-search ul li{
+    float: left;
+    width: 80px;
+    height: 25px;
+    margin-right: 5px;
+    text-indent: 5px;
 }
 .input-keyword{
     width: 300px;
@@ -503,12 +535,13 @@ body{
 .cate-and-profile{
     position: relative;
     width: 100%;
-    background-image: url("../image/2019081411325269100002.jpg");
-    
+    background: url("../image/2019081411325269100002.jpg") no-repeat;
+    background-position:50% 0;
+    background-color:  rgb(17, 21, 48);
 }
 .common{
-    width: 1190px;
-    min-width: 1190px;
+    width: 1230px;
+    min-width: 1230px;
     margin: 0 auto;
     clear:both;
     float:none;
@@ -554,7 +587,6 @@ body{
 .main-cates .main-cate h4{
     color:#cfcfcf;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
     padding: 0 30px;
 }
 .more{
