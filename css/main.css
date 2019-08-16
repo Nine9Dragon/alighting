@@ -221,8 +221,8 @@ body{
 .clearfix::after{
     content: '';
     display: block;
-    clear: both;
-    float: none;
+    clear: both !important;
+    float: none !important;
 }
 
 /*底部css*/
@@ -535,11 +535,13 @@ body{
 .cate-and-profile{
     position: relative;
     width: 100%;
+    height: 461px;
     background: url("../image/2019081411325269100002.jpg") no-repeat;
     background-position:50% 0;
     background-color:  rgb(17, 21, 48);
 }
 .common{
+    position: relative;
     width: 1230px;
     min-width: 1230px;
     margin: 0 auto;
@@ -609,4 +611,109 @@ body{
     height: 30px;
     background: url("https://www.alighting.com/statics/images/sprite.fw.png");
     background-position: -50px 15px;
+}
+/* 左边的个人信息 */
+.profile{
+    position: absolute;
+    width: 260px;
+    height: 420px;
+    background: #FFF;
+    right: 0;
+    top: 20px;
+}
+.profile-top{
+    padding:20px;
+}
+.profile-top span{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+}
+.profile-top span img{
+    width: 100%;
+}
+.profile-hi{
+    float: right;
+    width: 145px;
+    margin-top: 20px;
+    color: #000
+}
+.profile-hi p:last-child{
+    color: #aaa;
+}
+.profile-btns{
+    float: none;
+    clear: both;
+    text-align: center;
+    font-size: 14px;
+}
+.profile-btns a{
+    display: inline-block;
+    width: 104px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ee9451;
+}
+.profile-btns .login-a{
+    background: #ee9451;
+    color: #FFF;
+}
+.profile-btns .reg-a{
+    color: #ee9451;
+}
+.profile-mid{
+    background-color: #f7f7f6;
+    padding: 25px 0 15px;
+}
+.profile-mid a{
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    font-size: 14px;
+    color: #707070;
+    line-height: 40px;
+}
+.profile-mid span{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    background-image: url(https://www.alighting.com/statics/images/sprite.fw.png);
+}
+.profile-mid-house{
+    margin-left: auto;
+    margin-right: auto;
+    background-position:450px 0; 
+}
+.profile-mid-share{
+    margin-left: auto;
+    margin-right: auto;
+    background-position:400px 0; 
+}
+.profile-mid-earphone{
+    margin-left: auto;
+    margin-right: auto;
+    background-position:350px 0; 
+}
+.profile-news{
+    margin-top: 12px;
+}
+.profile-news dd{
+    padding: 10px 20px 0;
+    height: 125px;
+    overflow: hidden;
+}
+.profile-news ul li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.profile-news ul{
+    font-size: 12px;
+    line-height: 25px;
+}
+.profile-news ul li a{
+    color:#aaa;
 }
