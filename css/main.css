@@ -280,7 +280,7 @@ body{
 }
 .navcon .navcon_first_a{
     display: block;
-    width: 230px;
+    width: 257px;
     height: 52px;
     font: 16px '微软雅黑';
     line-height: 52px;
@@ -528,6 +528,9 @@ body{
     margin-top: 20px;
 }
 /* 首页中间的个人信息和轮播图 */
+.container{
+    min-width: 1230px;
+}
 .cate-and-profile{
     position: relative;
     width: 100%;
@@ -541,12 +544,12 @@ body{
     width: 1230px;
     min-width: 1230px;
     margin: 0 auto;
-    clear:both;
-    float:none;
+    clear:both !important;
+    float:none !important;
     color:#FFF;
 }
-.common ul li{
-    width: 230px;
+.common ul.main-cates li{
+    width: 257px;
 }
 .common .main-cates li{
     height:103px;
@@ -589,7 +592,7 @@ body{
 }
 .more{
     position: relative;
-    width: 230px;
+    width: 257px;
     height: 45px;
     line-height: 45px;
     font-size: 14px;
@@ -712,4 +715,68 @@ body{
 }
 .profile-news ul li a{
     color:#aaa;
+}
+/* 轮播图下面的4分组介绍 */
+.quarter{
+    padding: 20px 0 0;
+}
+.funcs{
+    float: left;
+    width: 258px;
+    position: relative;
+}
+.funcs .squer{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 79px;
+    left:121px;
+    background-color:#ebebeb;
+}
+.funcs li:not(:first-child){
+    width: 128px;
+    height: 86px;
+    float: left;
+    margin: 0 1px 1px 0;
+    text-align: center;
+    background-color: #ebebeb;
+    overflow: hidden;
+    line-height: 20px;
+}
+.funcs .sprite{
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 15px auto 3px;
+    background-image: url(https://www.alighting.com/statics/images/sprite.fw.png);
+}
+.funcs .fun1{
+    background-position: -300px 0;
+}
+.funcs .fun2{
+    background-position: -350px 0;
+}
+.funcs .fun3{
+    background-position: -400px 0;
+}
+.funcs .fun4{
+    background-position: -450px 0;
+}
+.topadv{
+    width: 972px;
+    float: left;
+}
+.topadv li{
+    float: left;
+    width: 307px;
+    height: 173px;
+    margin-left: 17px;
+}
+.topadv li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.topadv li img{
+    opacity: 1;
 }
