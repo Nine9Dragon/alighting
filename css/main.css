@@ -17,10 +17,6 @@ body{
     width: 1230px;
     margin: 0 auto;
 }
-.left{
-    float: left;
-    display: inline;
-}
 .top-link-left{
     float: left;
     display: inline;
