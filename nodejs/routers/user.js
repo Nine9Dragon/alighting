@@ -14,6 +14,17 @@ router.post("/login",(req,res)=>{
     })
 })
 
+router.post("/reg",(req,res)=>{
+    const {uname,upwd}= req.body;
+    console.log(uname,upwd);
+    var sql= "INSERT INTO alt_user (alt_userName,alt_upwd) VALUE (?,?)";
+    pool.query(sql,[uname,upwd],(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        res.send("1")
+    })
+})
+
 
 
 module.exports=router;
