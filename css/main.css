@@ -780,3 +780,67 @@ body{
 .topadv li img{
     opacity: 1;
 }
+
+/* 采购报价 */
+.prices{
+    margin: 20px auto 0;
+}
+.prices-atonce{
+    width: 257px;
+    height: 377px;
+    float: left;
+    background:#ee9451;
+    color: #FFF;
+    position: relative;
+}
+.prices-atonce b{
+    display: block;
+    margin: 38px 0 0 26px;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 400
+}
+.prices-atonce .prices-btns{
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    width: 100%;
+    text-align: center;
+}
+.prices-atonce .prices-btns a{
+    display: inline-block;
+    width: 106px;
+    height: 34px;
+    color:#FFF;
+    background:#d28044;
+    font-size: 16px;
+    line-height: 34px;
+    border-radius: 5px;
+    margin: 0 4px;
+}
+.prices-list{
+    float: right;
+    width: 972px;
+    height: 375px;
+    border: 1px solid #ee9451;
+    border-left: 0;
+    
+}
+.prices-list div>*{
+    float: left;
+}
+.prices-list h3{
+    width: 300px;
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 61px;
+}
+.prices-list ins{
+    text-decoration: none;
+    color:#ee9451;;
+}
+.prices-list span{
+    display: block;
+    font-size: 12px;
+    color: #acacac;
+}
