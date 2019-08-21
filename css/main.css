@@ -818,16 +818,36 @@ body{
     border-radius: 5px;
     margin: 0 4px;
 }
+.prices-atonce .prices-btns a:hover{
+    color:#d28044;
+    background: #FFF;
+}
 .prices-list{
     float: right;
     width: 972px;
     height: 375px;
     border: 1px solid #ee9451;
     border-left: 0;
-    
+    font-weight: 400;    
+}
+.prices-list div{
+    border-top: 1px solid #f4f4f4;
+}
+.prices-list li:first-child div{
+    border: 0;
 }
 .prices-list div>*{
     float: left;
+}
+.prices-list ul{
+    margin: 2px 15px;
+}
+.prices-list ul li{
+    float: left;
+}
+.prices-list li div{
+    margin: 0 14px;
+    height: 61px;
 }
 .prices-list h3{
     width: 300px;
@@ -835,7 +855,44 @@ body{
     font-size: 16px;
     line-height: 61px;
 }
+.prices-list div h4{
+    width: 110px;
+    height: 40px;
+    color:#707070;
+    margin-right: 64px;
+    padding-top: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+.prices-list div h5{
+    width: 112px;
+    height: 40px;
+    color:#707070;
+    padding-top: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+.prices-list div div{
+    width: 160px;
+    height: 60px;
+    color:#333;
+    margin: 0 14px;
+    text-align: center;
+    line-height: 20px;
+}
+.prices-list div a{
+    width: 105px;
+    height: 44px;
+    line-height: 44px;
+    color:#555;
+    font-size: 16px;
+    margin-top:10px;
+    text-align: center;
+    border-radius: 3px;
+    transition: all .4s linear;
+}
 .prices-list ins{
+    font-size: 16px;
     text-decoration: none;
     color:#ee9451;;
 }
@@ -843,4 +900,50 @@ body{
     display: block;
     font-size: 12px;
     color: #acacac;
+}
+.prices-list ul li:hover{
+    background:#f7f4f0;
+}
+.prices-list ul li:hover div .prices-btn{
+    background: #ee9451;
+    color:#FFF;
+}
+/* 六个广告 */
+.midadv{
+    margin: 20px auto 10px;
+}
+.midadv ul{
+    width: 1242px;
+    height: 362px;
+}
+.midadv li{
+    float: left;
+    margin: 0 11px 10px 0;
+    overflow: hidden;
+}
+.midadv li>*{
+    float: left;
+}
+.midadv .midadv-words{
+    background:#7980ad;
+    height: 176px;
+    width: 144px;
+    text-align: center;
+}
+.midadv .midadv-words a strong{
+    display: block;
+    width: 120px;
+    height: 47px;
+    line-height: 47px;
+    border: 1px solid #fff;
+    margin: 47px 12px 0;
+    font-size: 18px;
+    color:#FFF;
+}
+.midadv .midadv-words a span{
+    color:#FFF;
+    font-size: 14px;
+    display: block;
+    line-height: 32px;
+
 }
