@@ -957,3 +957,62 @@ body{
     opacity: 1;
     transform: scale(1.1)
 } 
+/* 板块1 */
+.forum{
+    margin: 0 auto 10px;
+}
+.topic{
+    background:#51558e;
+    height: 62px;
+    margin-bottom: 8px;
+}
+.topic h3{
+    float: left;
+    font-size: 24px;
+    padding-left: 36px;
+    text-align: center;
+    line-height: 62px;
+}
+.topic a{
+    float: right;
+    padding: 24px 16px 0;
+    color: #FFF;
+    line-height: 20px;
+}
+.topic a span{
+    display: inline-block;
+    width: 34px;
+    height: 14px;
+    margin-left: 6px;
+    vertical-align: -2px;
+    background-image:url("https://www.alighting.com/statics/images/sprite.fw.png");
+    background-position: -500px 0;
+}
+.topic ul{
+    float:right;
+}
+.topic ul li{
+    float: left;
+    font-size: 14px;
+}
+.forum_adv{
+    float: left;
+    width: 257px;
+}
+.forum_adv a{
+    display: block;
+    height: 304px;
+    margin-bottom: 10px;
+}
+.forum-pros{
+    float: left;
+    width: 972px;
+}
+.forum-pros li{
+    float: left;
+    width: 233px;
+    height: 302px;
+    margin: 0 0 10px 8px;
+    border: 1px solid #ededed;
+    overflow: hidden;
+}
