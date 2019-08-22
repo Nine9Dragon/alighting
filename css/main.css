@@ -945,5 +945,15 @@ body{
     font-size: 14px;
     display: block;
     line-height: 32px;
-
 }
+.midadv .midadv-pic {
+    overflow: hidden;
+    height: 176px;
+}
+.midadv ul li div a img {
+    transition: all .3s linear;
+}
+.midadv ul li div a img:hover{
+    opacity: 1;
+    transform: scale(1.1)
+} 
