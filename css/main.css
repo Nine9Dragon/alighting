@@ -1004,6 +1004,12 @@ body{
     height: 304px;
     margin-bottom: 10px;
 }
+.forum_adv a img{
+    transition: all .5s linear;
+}
+.forum_adv a:hover img{
+    opacity: .8;
+}
 .forum-pros{
     float: left;
     width: 972px;
@@ -1015,4 +1021,246 @@ body{
     margin: 0 0 10px 8px;
     border: 1px solid #ededed;
     overflow: hidden;
+    transition: all .4s linear;
+}
+.forum-pros li:hover{
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.15);
+}
+/* 两个半场的广告 第一个 */
+.twins a{
+    display: block;
+    width: 606px;
+    height: 132px;
+}
+.twins a img{
+    width: 100%;
+    height: 100%;
+}
+/* 板块3 */
+.blocks{
+    margin: 20px auto;
+}
+.brown>dd{
+    border: 1px solid #f8f8f8;
+}
+.brown .blocks-pics a{
+    float: left;
+    width: 257px;
+    height: 429px;
+}
+.blocks-pros a{
+    display: block;
+    width: 285px;
+    height: 214px;
+    overflow: hidden;
+    border-right: 1px solid #f8f8f8;
+}
+.blocks-pros a:first-child{
+    border-bottom:  1px solid #f8f8f8;
+}
+.blocks-news {
+    float: left;
+    width: 400px;
+    height: 100%;
+    background-color: #fff8f2;
+}
+.blocks-news dt{
+    height: 67px;
+    line-height: 67px;
+    padding: 0 34px;
+    font-size: 18px;
+    background-color: #f8ece2;
+    color: #bd6721;
+}
+.blocks-news dt span{
+    display: inline-block;
+    width: 29px;
+    height: 23px;
+    vertical-align: -6px;
+    margin-right: 4px;
+    background-image:url("https://www.alighting.com/statics/images/sprite.fw.png") ;
+    background-position: 0 -50px;
+}
+.blocks-news dd .blocks-newest-list div>*{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    font-size: 14px;
+    font-weight: 100;
+}
+.blocks-newest-list li div{
+    border-top: 1px solid #f1f1f1;
+}
+.blocks-newest-list li:first-child div{
+    border: 0;
+}
+.blocks-newest-list div{
+    display: block;
+    height: 59px;
+    line-height: 59px;
+    margin: 0 30px;
+}
+.blocks-newest-list h3{
+    width: 215px;
+    margin-right: 10px;
+}
+.blocks-newest-list h5{
+    width: 78px;
+    float: right;
+    text-align: center;
+    color: #333 !important;
+}
+.green{
+    background-color: #e3efe3 !important;
+    color: #518152 !important;
+}
+.greenDd{
+    background-color: #f7fff7
+}
+.second{
+    margin-bottom: 20px; 
+}
+
+/* 新闻活动及合作品牌 */
+.news-and-brand{
+    background: #f5f5f5;
+}
+.news{
+    padding: 40px 0;
+}
+.news h2{
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    font-weight: 100;
+    font-size: 24px;
+    color: #707070;
+}
+.news dl{
+    float: left;
+    width: 404px;
+}
+.news dl dt{
+    background-color: #715a53;
+    height: 62px;
+    line-height: 62px;
+    margin-bottom: 24px;
+}
+.news dl  dt  h3{
+    font-size: 18px;
+    text-indent: 36px;
+    color: #fff;
+    font-weight: 100;
+}
+.new-list li{
+    height:22px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+.brown .border0{
+    border: 0;
+}
+.new-list li{
+    color:#707070;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.new-list li span{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    vertical-align: middle;
+    margin: 0 10px;
+    background-image: url("https://www.alighting.com/statics/images/sprite.fw.png");
+    background-position: -250px -50px;
+}
+.news .blue{
+    margin-left: 9px;
+}
+.news .blue dt{
+    background-color: #5f5e9b;
+}
+.blue .new-list li span{
+    background-position: -300px -50px;
+}
+.news .ocean{
+    margin-left: 9px;
+}
+.news .ocean dt{
+    background-color: #5890c0;
+}
+.news-subjects li{
+    height: 136px;
+    margin-bottom: 23px;
+    background-color: #FFF;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+.news-subjects li > *{
+    float: left;
+}
+.news-subjects li span{
+    margin: 14px;
+    width: 140px;
+    height: 106px;
+}
+.news-subjects li div{
+    width: 134px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #707070;
+    padding-top: 30px;
+}
+.news-subjects li .news-btn{
+    width: 87px;
+    height: 39px;
+    background-color: #ee9451;
+    font-size: 14px;
+    color: #FFF;
+    line-height: 39px;
+    text-align: center;
+    margin-top: 64px;
+    border-radius: 5px;
+}
+.brands{
+    padding-bottom: 56px;
+}
+.brands dt{
+    border-bottom: 3px solid #e8e8e8;
+    margin-bottom: 26px;
+}
+.brands dt h2{
+    float: left;
+    padding: 0 0 18px 8px;
+    color: #707070;
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    font-weight: 100;
+}
+.brands dd ul li{
+    width: 1230px;
+    overflow: hidden;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.brands dd ul li a:first-child{
+    margin-left: 0;
+}
+.brands dd ul li a{
+    position: relative;
+    margin-left: 10px;
+    float: left;
+    width: 167px;
+    height: 61px;
+    overflow: hidden;
+}
+.brands dd ul li a img{
+    width: 100%;
+    height: 100%;
 }
