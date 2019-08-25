@@ -1011,7 +1011,7 @@ body{
     margin-bottom: 10px;
 }
 .forum_adv a img{
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 .forum_adv a:hover img{
     opacity: .8;
@@ -1048,6 +1048,12 @@ body{
 }
 .brown>dd{
     border: 1px solid #f8f8f8;
+}
+.brown a img{
+    transition: all .3s linear
+}
+.brown a:hover img{
+    opacity: .8;
 }
 .brown .blocks-pics a{
     float: left;
@@ -1116,6 +1122,21 @@ body{
     float: right;
     text-align: center;
     color: #333 !important;
+}
+.blocks-newest-list li:hover{
+    background:#f8ece2;
+    color: #333;
+}
+.greenDd .blocks-newest-list li:hover{
+    background:#e3efe3;
+    color: #333;
+}
+.blocks-news dt{
+    margin-bottom: 1px;
+}
+.blocks-newest-list li:hover div a{
+    color: #333;
+    text-decoration: underline;
 }
 .green{
     background-color: #e3efe3 !important;
@@ -1197,6 +1218,10 @@ body{
 }
 .news .ocean dt{
     background-color: #5890c0;
+}
+.news a:hover{
+    text-decoration: underline;
+    color:#333;
 }
 .news-subjects li{
     height: 136px;
