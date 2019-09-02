@@ -1339,3 +1339,89 @@ body{
 .sub-cates-adv{
     padding-left: 35px;
 }
+.float_banner{
+    position: fixed;
+    top: 40%;
+    right: 0px;
+    width: 32px;
+    height: 231px;
+    z-index: 1000;
+}
+.float_banner_inner .a_fix_box{
+    width: 32px;
+    height: 36px;
+    background: #666;
+    display: block;
+    margin-bottom: 3px;
+}
+.float_banner_inner .float_banner_ask{
+    background-image: url("../image/float_banner_small.png");
+    background-position: 0 -78px;
+}
+.float_banner_inner .float_banner_ask:hover{
+    background-color: #1b7dd0;
+}
+.float_banner_inner .float_banner_ask:hover .a_fix_box_l{
+    display: block;
+}
+.float_banner_inner .a_fix_box_l{
+    display: none;
+    width: 61px;
+    height: 36px;
+    line-height: 32px;
+    text-align: center;
+    margin-left: -61px;
+    background: #1b7dd0;
+    color: #FFF;
+}
+.float_banner_inner .icon-feedback{
+    background-image: url("../image/float_banner_small.png");
+    background-position: 0 -117px;
+}
+.float_banner_inner .icon-feedback:hover{
+    background-color: #1b7dd0;
+}
+.float_banner_inner .icon-feedback:hover .a_fix_box_l{
+    display: block;
+}
+.float_banner_inner .icon-ewm{
+    background-image: url("../image/float_banner_small.png");
+    background-position: 0 -155px;
+}
+.float_banner_inner .icon-ewm:hover{
+    background-color: #1b7dd0;
+}
+.float_banner_inner .icon-ewm:hover .fix_weixin_box{
+    display: block;
+}
+.fix_weixin_box{
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: -150px;
+    border: 2px solid #1b7dd0;
+    padding: 15px;
+    background: #FFF;
+}
+.fix_weixin_box img{
+    width: 116px;
+    height: 133px;
+}
+.fix_weixin_box i{
+    width: 0;
+    border: 5px solid transparent;
+    border-left: 5px solid #FFF;
+    position: absolute;
+    top: 13px;
+    left: 146px;
+}
+.float_banner_inner .icon-gotop{
+    background-image: url("../image/float_banner_small.png");
+    background-position: 0 -195px;
+}
+.float_banner_inner .icon-gotop:hover{
+    background-color: #1b7dd0;
+}
+.float_banner_inner .icon-gotop:hover .a_fix_box_l{
+    display: block;
+}
