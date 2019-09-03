@@ -1416,6 +1416,7 @@ body{
     left: 146px;
 }
 .float_banner_inner .icon-gotop{
+    display: none;
     background-image: url("../image/float_banner_small.png");
     background-position: 0 -195px;
 }

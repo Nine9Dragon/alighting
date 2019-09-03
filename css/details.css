@@ -1,0 +1,118 @@
+.w1190 {
+    width: 1190px !important;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto 20px;
+}
+a{
+    color: #666;
+}
+.wrapper .path{
+    height: 22px;
+    line-height: 22px;
+    padding: 10px 0;
+    overflow: hidden;
+    color: #999;
+}
+.hot-scroll{
+    width: 410px;
+    min-height: 710px;
+    background:#FFF;
+    border: 1px solid #e7e7e7;
+    border-right: 0;
+}
+.focus-img{
+    padding:5px;
+}
+.focus-img .focus-tabs{
+    overflow: hidden;
+    padding-top: 10px;
+}
+.focus-img .focus-tabs li{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+    text-align: center;
+}
+.focus-box{
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+.focus-box .store_info_c{
+    padding: 5px 5px 10px;
+    overflow: hidden;
+}
+.info_box{
+    float: left;
+}
+.store_operation{
+    float: right;
+    color: #aaa;
+}
+.store_operation a {
+    color: #aaa;
+}
+.focus-box .store_contact{
+    padding: 10px;
+    color: #1B7DD0;
+    border: 1px solid #DEF0F7;
+    background: #F6FBFF;
+}
+.store_statistics{
+    padding: 20px 0 10px;
+    overflow: hidden;
+    text-align: center;
+}
+.store_browse{
+    height: 37px;
+    color: #aaa;
+    text-align: center;
+}
+.store_browse b{
+    display: block;
+    color: #666;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+.store_browse em{
+    font-style: normal;
+    font-weight: normal;
+}
+.focus-tabs{
+    padding-top: 15px;
+    text-align: center;
+}
+.focus-tabs div a{
+    margin-right: 5px;
+}
+.focus-tabs div a i{
+    
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    background-image: url("https://www.alighting.com/statics/images/details/details_icon.png");
+}
+.focus-tabs div a .i1{
+    background-position: -50px -69px;
+}
+.focus-tabs div a .i2{
+    background-position: -107px -69px;
+}
+.focus-tabs div a .i3{
+    background-image: url("https://www.alighting.com/statics/images/sprite.fw.png");
+    background-position: -450px -50px;
+}
+.focus-tabs div a:first-child{
+    margin-right: 15px;
+}
+.qrcode-anchor {
+    position: relative;
+    margin-left: 20px;
+}
