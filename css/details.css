@@ -15,6 +15,9 @@ a{
     overflow: hidden;
     color: #999;
 }
+.details_head{
+    position: relative;
+}
 .hot-scroll{
     width: 410px;
     min-height: 710px;
@@ -89,23 +92,31 @@ a{
     padding-top: 15px;
     text-align: center;
 }
+.focus-tabs div{
+    text-align: center;
+    vertical-align: middle;
+}
 .focus-tabs div a{
     margin-right: 5px;
 }
 .focus-tabs div a i{
     
     display: inline-block;
-    width: 14px;
-    height: 12px;
     background-image: url("https://www.alighting.com/statics/images/details/details_icon.png");
 }
 .focus-tabs div a .i1{
+    width: 14px;
+    height: 12px;
     background-position: -50px -69px;
 }
 .focus-tabs div a .i2{
+    width: 15px;
+    height: 13px;
     background-position: -107px -69px;
 }
 .focus-tabs div a .i3{
+    width: 14px;
+    height: 14px;
     background-image: url("https://www.alighting.com/statics/images/sprite.fw.png");
     background-position: -450px -50px;
 }
@@ -115,4 +126,61 @@ a{
 .qrcode-anchor {
     position: relative;
     margin-left: 20px;
+}
+.goods_box{
+    position: absolute;
+    top: 0;
+    left: 411px;
+    width: 779px;
+    min-height: 710px;
+    border: 1px solid #e7e7e7;
+    border-right: 0;
+    background: #FFF;
+    z-index: 99;
+}
+.view_tit{
+    padding: 15px 20px;
+    overflow: hidden;
+    color: #333;
+}
+.view_tit strong{
+    float: left;
+    font-weight: 400;
+    font-size: 20px;
+    max-width: 550px;
+}
+.view_tit label{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+.goods_price>span{
+    float: left;
+    width: 91px;
+    height: 57px;
+    line-height: 57px;
+    padding: 20px 0;
+    background: #f5f5f5;
+    color:#aaa;
+    text-align: center;
+    text-indent: .4em;
+}
+.goods_price>div{
+    float: left;
+    width: 685px;
+    height: 97px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+.goods_price>div>span{
+    float: left;
+    width: 646px;
+    height: 56px;
+    line-height: 56px;
+    overflow: hidden;
+    padding: 20px;
+    margin-right: 1px;
+    font-size: 26px;
+    font-weight: 400;
+    color: #1B7DD0;
 }
