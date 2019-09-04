@@ -429,3 +429,38 @@ a{
 .contact-box ul li{
     width: 298px;
 }
+.details_desc_box{
+    margin: 10px 0;
+    padding: 10px;
+    background: #FFF;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+}
+.details_hint_box{
+    padding: 20px;
+    color: #666;
+    border: 1px solid #e7e7e7;
+    background: #FFF;
+}
+.details_hint_box b{
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+.explain_text{
+    line-height: 20px;
+    padding: 20px;
+    background: #FFF;
+    border: 1px solid #e7e7e7;
+    border-top: 0;
+}
+.explain_text h2{
+    font-weight: 700;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+.explain_text h3{
+    font-weight: 700;
+    font-size: 14px;
+    margin: 5px 0;
+}
