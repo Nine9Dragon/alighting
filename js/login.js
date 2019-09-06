@@ -14,7 +14,7 @@ $(()=>{
             data,
             success:function(result){
                 console.log(result);
-                result>0?window.open("index.html","_self"):alert("登录失败")
+                result.code>0?window.open("index.html","_self"):alert("登录失败")
             }
         })
         
@@ -33,7 +33,7 @@ $(()=>{
             data,
             success:function(result){
                 console.log(result);
-                result>0?window.open("login.html","_self"):alert("登录失败")
+                result.code>0?window.open("login.html","_self"):alert("登录失败")
             }
         })
     })
