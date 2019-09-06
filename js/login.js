@@ -12,6 +12,7 @@ $(()=>{
             url:"http://127.0.0.1:3000/user/login",
             type:"post",
             data,
+            xhrFields:{withCredentials:true},
             success:function(result){
                 console.log(result);
                 result.code>0?window.open("index.html","_self"):alert("登录失败")

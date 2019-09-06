@@ -10,11 +10,11 @@ router.post("/login", (req, res) => {
     var alt_userName = uname;
     var alt_upwd = upwd;
     // var alt_userName = req.uname;
-    var sql = `SELECT id,alt_userName FROM alt_user WHERE alt_userName=?&&alt_upwd=?`;
+    var sql = `SELECT uid,alt_userName FROM alt_user WHERE alt_userName=?&&alt_upwd=?`;
     pool.query(sql, [alt_userName, alt_upwd], (err, result) => {
         if (err) throw err;
         if (result.length > 0) {
-            var id = result[0].id;
+            var id = result[0].uid;
             var userName = result[0].alt_userName;
             req.session.uid=id;
             req.session.userName=userName;
