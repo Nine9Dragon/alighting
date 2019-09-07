@@ -2,6 +2,9 @@ body{
     display: block;
     font-size:12px;
 }
+.tr {
+    transition: all .5s linear;
+}
 /*头部导航栏css*/
 .top-link{
     display: block;
@@ -671,6 +674,43 @@ body{
 .profile-btns .reg-a{
     color: #ee9451;
 }
+.profile-total{
+    margin: 0 -10px;
+    float: none;
+    clear: both;
+    text-align: center;
+}
+.profile-total::after{
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+.profile-total ins{
+    color: #ee9451;
+    text-decoration: none;
+}
+.profile-total samp{
+    color: #707070;
+    font-size: 12px;
+}
+.profile-total span{
+    float: left;
+    border-left: 1px solid #e1e1e1;
+    width: 0;
+    height: 23px;
+    margin: 0;
+    margin-top: 12px;
+}
+.profile-total p{
+    width: 33%;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+}
+.profile-total p>*{
+    display: block;
+}
 .profile-mid{
     background-color: #f7f7f6;
     padding: 25px 0 15px;
@@ -1262,6 +1302,13 @@ body{
 .brands{
     padding-bottom: 56px;
 }
+.brands-btns{
+    float:right;
+    font-size: 18px;
+}
+.brands-btns a{
+    color: #666;
+}
 .brands dt{
     border-bottom: 3px solid #e8e8e8;
     margin-bottom: 26px;
@@ -1297,6 +1344,21 @@ body{
 .brands dd ul li a img{
     width: 100%;
     height: 100%;
+}
+.brands dd {
+    overflow: hidden;
+}
+.brand_list{
+    font-size: 0;
+    width: 4920px;
+    height: 66px;
+    overflow: hidden;
+}
+.brand_list::after{
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
 }
 
 

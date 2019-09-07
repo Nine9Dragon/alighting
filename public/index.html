@@ -21,12 +21,12 @@
             <div class="top-link-left">
                 <ul class="top-link-left-login">
                     <li>
-                        <!-- <a href="javascript:;">登录</a> -->
-                        <span style="color:#aaa">Welcome NineDragon</span>
+                        <a href="javascript:;" class="unLogin">登录</a>
+                        <span style="color:#aaa;display:none" class="isLogin"></span>
                     </li>
                     <li>
-                        <!-- <a href="javascript:;">免费注册</a> -->
-                        <a href="javascript:;">注销</a>
+                        <a href="javascript:;" class="unLogin">免费注册</a>
+                        <a href="javascript:logOut();" style="display:none" class="isLogin">注销</a>
                     </li>
                 </ul>
             </div>
@@ -1053,7 +1053,7 @@
                     </div>
                 </div>
                 <div class="profile">
-                    <div class="profile-top clearfix">
+                    <div class="profile-top clearfix unLogin">
                         <span>
                             <img src="https://www.alighting.com//statics/images/new-index/60-60-1.png" alt="">
                             <!-- <img src="https://www.alighting.com/statics/images/photo-cover.png" alt=""> -->
@@ -1067,6 +1067,33 @@
                             <a href="reg.html" class="reg-a">注册</a>
                         </div>
                     </div>
+                    <div class="profile-top clearfix isLogin" style="display:none">
+                        <span>
+                            <img src="https://www.alighting.com//statics/images/new-index/60-60-1.png" alt="">
+
+                        </span>
+                        <div class="profile-hi">
+                            <p>Hi 晚上好</p>
+                            <p id="username"></p>
+                        </div>
+                        <div class="profile-total">
+                            <p>
+                                <ins id="info1">0</ins>
+                                <samp>采购中</samp>
+                            </p>
+                            <span></span>
+                            <p>
+                                <ins id="info2">0</ins>
+                                <samp>报价中</samp>
+                            </p>
+                            <span></span>
+                            <p>
+                                <ins id="info3">0</ins>
+                                <samp>招标中</samp>
+                            </p>
+                        </div>
+                    </div>
+
                     <div class="profile-mid clearfix">
                         <a href="javascript:;">
                             <span class="profile-mid-house"></span>一键开店
@@ -1977,9 +2004,82 @@
         <dl class="common brands">
             <dt class="clearfix">
                 <h2>合作品牌</h2>
+                <div class="brands-btns">
+                    <a href="javascript:;" id="btn-left"><</a>
+                    <a href="javascript:;" id="btn-right">></a>
+                </div>
             </dt>
             <dd>
-                <ul class="clearfix">
+                <ul class="brand_list clearfix">
+                    <li>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701101002327394.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121818224219900013.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121811495234500033.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121811260633200028.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121811384807800030.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121811423841300031.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121811524462600034.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201804\2018040214270127000035.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701201647115964.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201804\2018040214263342000034.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201804\2018040214251367300032.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121818151488600012.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201712\2017121811312062700029.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701201643510896.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701201623125280.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201804\2018040915460940400023.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701201614074952.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201804\2018040915454659700022.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701201603285197.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com/201609/201609181516099424.jpg" alt="">
+                        </a>
+                        <a href="javascript:;">
+                            <img src="http://statics.aldgo.com\201701\201701101002484330.jpg" alt="">
+                        </a>
+                    </li>
                     <li>
                         <a href="javascript:;">
                             <img src="http://statics.aldgo.com\201701\201701101002327394.jpg" alt="">
@@ -2203,11 +2303,34 @@
                 url: "http://127.0.0.1:3000/user/isLogin",
                 type: "get",
                 success: function (result) {
-                    console.log(result);
+                    if (result.code > 0) {
+                        $(".unLogin").css("display", "none");
+                        $(".isLogin").css("display", "block");
+                        $("span.isLogin").html("Welcome  " + result.data);
+                        $("#username").html(result.data)
+                    } else {
+                        console.log(result.msg);
+                    }
                 },
-                xhrFields:{withCredentials:true},
+                xhrFields: {
+                    withCredentials: true
+                },
             })
-        })()
+        })();
+
+        function logOut() {
+            $.ajax({
+                url: "http://127.0.0.1:3000/user/logOut",
+                type: "get",
+                success: function (result) {
+                    console.log(result);
+                    location.reload();
+                },
+                xhrFields: {
+                    withCredentials: true
+                },
+            })
+        }
     </script>
 </body>
 

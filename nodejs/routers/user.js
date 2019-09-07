@@ -18,9 +18,6 @@ router.post("/login", (req, res) => {
             var userName = result[0].alt_userName;
             req.session.uid=id;
             req.session.userName=userName;
-            console.log(userName);
-            console.log(req.session);
-            console.log(req.sessionID);
             res.send({code:1,msg:"登录成功"});
         }else{
             res.send({code:0,msg:"用户名或密码有误"})
@@ -43,15 +40,18 @@ router.post("/reg", (req, res) => {
 })
 
 router.get("/isLogin",(req,res)=>{
-    console.log(req.sessionID);
-    var uid = req.session.uid;
-    console.log(uid);
-    console.log(req.session)
-    if(req.session.uid){
-        res.send("1");
+    var userName = req.session.userName;
+    if(userName){
+        res.send({code:1,msg:"登陆成功", data:userName});
     }else{
         res.send({code:0,msg:"未登录"})
     }
+})
+router.get("/logOut",(req,res)=>{
+    console.log(req.session);
+    req.session.destroy();
+    console.log(req.session);
+    res.send("111");
 })
 
 module.exports = router;
