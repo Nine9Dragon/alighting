@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .list {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all .3s linear;
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        .tab {
+            position: relative;
+
+        }
+
+        .tab ol {
+            list-style: none;
+            position: absolute;
+            top: 463px;
+            left: 140px;
+        }
+
+        .tab ol li {
+            float: left;
+            margin-right: 14px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #c5c5c5;
+
+        }
+        .on{
+            background-color: #1b7dd0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <ul>
+            <li class="active">
+                <a href="https://detail.alighting.com/item/391854.html" target="_blank">
+                    <img src="http://statics.aldgo.com\201909\2019090515102021500001.png" style="opacity: 1;">
+                </a>
+            </li>
+
+            <li>
+                <a href="http://detail.alighting.com/item/391112.html" target="_blank">
+                    <img src="http://statics.aldgo.com\201909\2019090515112514300002.png" style="opacity: 1;">
+                </a>
+            </li>
+
+            <li>
+                <a href="http://detail.alighting.com/item/390172.html" target="_blank">
+                    <img src="http://statics.aldgo.com\201909\2019090515122189700004.png" style="opacity: 1;">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://detail.alighting.com/item/360138.html" target="_blank">
+                    <img src="http://statics.aldgo.com\201909\2019090515274807300006.png" style="opacity: 1;">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://detail.alighting.com/item/384781.html" target="_blank">
+                    <img src="http://statics.aldgo.com\201908\2019081914132976300011.jpg" style="opacity: 1;">
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="tab">
+        <ol>
+            <li data-set="0" class="on"></li>
+            <li data-set="1"></li>
+            <li data-set="2"></li>
+            <li data-set="3"></li>
+            <li data-set="4"></li>
+        </ol>
+    </div>
+    <script>
+        var ul = document.querySelector("ul")
+        var list = ul.children;
+        var ol = document.querySelector("ol")
+        var points = ol.children;
+        console.log(ul);
+console.log(list);
+console.log(ol)
+console.log(points)
+        var i = 0;
+
+        function up(m) {
+            if (!m) {
+                m = i + 0;
+            }
+            for (var j = 0; j < list.length; j++) {
+                list[j].className = "";
+                points[j].className="";
+            }
+            i = m;
+            if (i == 5) {
+                i = 0
+            }
+            list[i].className = "active"
+            points[i].className="on";
+            i++;
+        }
+        setInterval(function () {
+            up();
+        }, 3000)
+        var canClick = true;
+        ol.onclick = function (e) {
+            if (canClick) {
+                var li = e.target;
+                console.log(e.target.dataset.set)
+                console.log(li);
+                if (li.nodeName == "LI") {
+                    if (li.className !== "on") {
+                        for (var i = 0; i < points.length; i++) {
+                            if (points[i] == li) {
+                                break;
+                            }
+                        }
+                        console.log(i);
+                        up(i);
+                        setTimeout(function () {
+                            canClick = true;
+                        }, 300);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
