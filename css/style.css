@@ -23,4 +23,6 @@ a:active{
 .bg-white{
     background:#FFF;
 }
-
+.zIndex1{
+    z-index: 1;
+}

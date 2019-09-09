@@ -40,9 +40,8 @@ setInterval(function () {
 var canClick = true;
 ol.onclick = function (e) {
   if (canClick) {
+    canClick=false;
     var li = e.target;
-    console.log(e.target.dataset.set)
-    console.log(li);
     if (li.nodeName == "LI") {
       if (li.className !== "on") {
         for (var i = 0; i < points.length; i++) {
@@ -50,7 +49,6 @@ ol.onclick = function (e) {
             break;
           }
         }
-        console.log(i);
         up(i);
         setTimeout(function () {
           canClick = true;
