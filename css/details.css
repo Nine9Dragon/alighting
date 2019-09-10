@@ -464,3 +464,6 @@ a{
     font-size: 14px;
     margin: 5px 0;
 }
+.border_blue{
+    border-color: #2B86D3 !important;
+}

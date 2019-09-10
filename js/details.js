@@ -20,6 +20,9 @@ var bigImg = document.querySelector(".big_img").firstElementChild.firstElementCh
 smallImgs.addEventListener("mouseover",function(e){
     if(e.target.nodeName=="LI"){
        bigImg.setAttribute("src",e.target.dataset.bsrc);
-       e.target.style.borderColor="border-color: #2B86D3; "
+       for(var i=0;i<smallImgs.children.length;i++){
+           smallImgs.children[i].className="";
+       }
+       e.target.className="border_blue"
     }
 })
