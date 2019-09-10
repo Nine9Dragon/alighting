@@ -54,4 +54,12 @@ router.get("/logOut",(req,res)=>{
     res.send("111");
 })
 
+router.get("/snzm",(req,res)=>{
+    var sql = "SELECT img_url,title,details,factory FROM `alt_snzm`";
+    pool.query(sql,(err,result)=>{
+        if(err)throw err;
+        res.send(result);
+    })
+})
+
 module.exports = router;

@@ -1,3 +1,163 @@
+// 可选地，上面的请求可以这样做
+axios.get('http://127.0.0.1:3000/user/snzm').then(result=> {
+    var f1 = document.getElementById("floor1");
+    var f2 = document.getElementById("floor2");
+    var f3 = document.getElementById("floor3");
+    var f4 = document.getElementById("floor4");
+    var f5 = document.getElementById("floor5");
+    var f6 = document.getElementById("floor6");
+    var f7 = document.getElementById("floor7");
+    var html = ``;
+    for(var i=0;i<10;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f1.innerHTML=html;
+    html=``;
+    for(var i=10;i<20;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f2.innerHTML=html;
+    html=``;
+    for(var i=20;i<30;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f3.innerHTML=html;
+    html=``;
+    for(var i=30;i<40;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f4.innerHTML=html;
+    html=``;
+    for(var i=40;i<50;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f5.innerHTML=html;
+    html=``;
+    for(var i=50;i<60;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f6.innerHTML=html;
+    html=``;
+    for(var i=60;i<70;i++){
+        var data = result.data[i];
+        html+=`
+        <li>
+            <var>
+                <a href="javascript:;">
+                    <img src="${data.img_url}" alt="">
+                    <samp></samp>
+                </a>
+                <ins>${data.title}</ins>
+                <h4>${data.details}</h4>
+                <h5>${data.factory}</h5>
+                <p>
+                    <a href="javascript:;">查看产品</a>
+                </p>
+            </var>
+        </li>
+        `
+    }
+    f7.innerHTML=html;
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 window.onscroll = function () {
     var top = document.body.scrollTop || document.documentElement.scrollTop;
     var fixnav = document.querySelector(".fixnav");
@@ -45,7 +205,7 @@ window.onscroll = function () {
         }
         list[5].className = "cur"
     }
-    if (top > 4840) {
+    if (top > 4800) {
         for (var key of list) {
             key.className = ""
         }
