@@ -14,3 +14,12 @@ span2.onclick=function(){
     tab1.style.display="none";
     tab2.style.display="block";
 }
+var smallImgs = document.querySelector(".focus-tabs");
+var bigImg = document.querySelector(".big_img").firstElementChild.firstElementChild;
+
+smallImgs.addEventListener("mouseover",function(e){
+    if(e.target.nodeName=="LI"){
+       bigImg.setAttribute("src",e.target.dataset.bsrc);
+       e.target.style.borderColor="border-color: #2B86D3; "
+    }
+})
