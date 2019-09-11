@@ -3,6 +3,7 @@ const session = require("express-session");
 const bodyParse = require("body-parser");
 const cors = require("cors");
 const user = require("./routers/user");
+const product = require("./routers/details");
 
 var app = express();
 app.listen(3000);
@@ -25,8 +26,9 @@ app.use(bodyParse.urlencoded({
 })) 
 
 
-app.use("/user",user);
 
+app.use("/user",user);
+app.use("/product",product);
 
 
 

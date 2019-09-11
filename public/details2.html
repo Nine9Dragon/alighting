@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login-reg.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/details.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- 头部文件 -->
+    <div class="top-link">
+        <div class="w1190">
+            <div class="top-link-left">
+                <ul class="top-link-left-login">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="top-link-right-ul">
+                <li><a href="javascript:;">商城首页</a></li>
+                <li class="second_li"><a href="javascript:;">我的阿拉丁<img src="../image/下箭头.png"></a>
+                    <ul class="ui-corner-all">
+                        <li><a href="javascript:;">采购商</a></li>
+                        <li><a href="javascript:;">已买到产</a></li>
+                        <li><a href="javascript:;">待付款</a></li>
+                        <li><a href="javascript:;">供应商</a></li>
+                        <li><a href="javascript:;">已卖出产</a></li>
+                        <li><a href="javascript:;">代发货</a></li>
+                        <li><a href="javascript:;">管理产品</a></li>
+                    </ul>
+                </li>
+                <li class="third_li">
+                    <a href="javascript:;" style="padding-left:0;">
+                        <img src="../image/购物车.png" class="image-car">采购车<img src="../image/下箭头.png">
+                    </a>
+                    <ul class="ui-corner-all">
+                        <li>
+                            <dd class="shoping-car-img">
+                                <span></span>
+                                您采购车里还没有任何宝贝。
+                            </dd>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">帮助中心</a></li>
+                <li><a href="javascript:;">下载到桌面</a></li>
+                <li><a href="javascript:;">添加收藏</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix bg-white">
+        <div class="w1190 clearfix">
+            <div class="logo-box left">
+                <a class="left" href="javascript:;"
+                    style="width: 230px;height: 80px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 1px 0;">
+                </a>
+                <a class="left"
+                    style="width: 200px;height: 91px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 2px -128px;">
+                </a>
+            </div>
+            <form class="head-search">
+                <div class="head-search-box">
+                    <div class="head-search-box-tab">
+                        <span>产品</span>
+                        <span>店铺</span>
+                        <span>求购</span>
+                    </div>
+                    <div class="head-search-box-text">
+                        <div class="input-hover">
+                            <input type="text" class="left input-keyword" placeholder="请输入关键词，如：3头水晶吊灯  白色10w筒灯">
+                            <div class="near-hot-search">
+                                <h5>大家都在找</h5>
+                                <ul class="clearfix">
+                                    <li><a href="javascript:;">吊灯</a></li>
+                                    <li><a href="javascript:;">吸顶灯</a></li>
+                                    <li><a href="javascript:;">台灯</a></li>
+                                    <li><a href="javascript:;">投光/投射灯</a></li>
+                                    <li><a href="javascript:;">简灯</a></li>
+                                    <li><a href="javascript:;">面板灯</a></li>
+                                    <li><a href="javascript:;">路灯</a></li>
+                                    <li><a href="javascript:;">天花射灯</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="input-submit" value="搜索">
+                </div>
+            </form>
+            <div class="logo-box right">
+                <div class="left"
+                    style="width: 180px;height: 110px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 9px -264px;">
+                </div>
+            </div>
+        </div>
+        <div class="brand_middle clearfix">
+            <div class="nav">
+                <div class="navcon w1190">
+                    <a class="navcon_first_a" href="javascript:;" style="width: 230px">产品分类</a>
+                    <ul>
+                        <li>
+                            <a href="javascript:;">首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">产品供应器</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">采购报价区</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">品牌中心</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">VIP服务</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">阿拉丁照明网</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">广州照明国际展(光亚展)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="wrapper w1190 clearfix">
+        <div class="path">
+            <a href="javascript:;">
+                首页
+            </a>> 灯具 > 室内灯具 >
+            <a href="javascript:;">
+                小夜灯
+            </a> >
+            创意七彩硅胶小夜灯生日礼物儿童房宿舍神器拍拍变色梦幻台灯插电
+        </div>
+        <div class="details_head clearfix">
+            <div class="hot-scroll left">
+                <div class="focus-img">
+                    <ul class="big_img">
+                        <li>
+                            <img src="http://statics.aldgo.com/201909/201909071025525432_400_400.jpg" alt="">
+                        </li>
+                        <li style="display:none">
+                            <img src="http://statics.aldgo.com/201905/201905081219251040_400_400.jpg"  alt="">
+                        </li>
+                        <li style="display:none">
+                            <img src="http://statics.aldgo.com/201905/201905081219251040_400_400.jpg"  alt="">
+                        </li>
+                        <li style="display:none">
+                            <img src="http://statics.aldgo.com/201905/201905081219251040_400_400.jpg"  alt="">
+                        </li>
+                        <li style="display:none">
+                            <img src="http://statics.aldgo.com/201905/201905081219251040_400_400.jpg"  alt="">
+                        </li>
+                    </ul>
+                    <ul class="focus-tabs" id="imgSm">
+                        
+                    </ul>
+                </div>
+                <div class="focus-box" id="first"></div>
+                <div class="focus-tabs">
+                    <div>
+                        <a href="javascrip:;">
+                            <i class="i1"></i>
+                            关注产品
+                        </a>
+                        <a href="javascrip:;">
+                            <i class="i2"></i>
+                            分享
+                        </a>
+                        <a href="javascrip:;" class="qrcode-anchor">
+                            <i class="i3"></i>
+                            扫一扫
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="goods_box left" id="second">
+                
+            </div>
+        </div>
+        <div>
+            <div class="side">
+                <div class="side_item">
+                    <div class="side_item_tit">
+                        <h3>同类型的品牌</h3>
+                    </div>
+                    <div class="side_item_box">
+                        <ul class="side_img_list" id="similar_details">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="alt_tabs">
+                    <div class="tab">
+                        <span class="cur">详细信息</span><span>订购说明</span>
+                    </div>
+                    <div class="alt-tabs-content">
+                        <div class="contact-box">
+                            <ul class="tab_property" id="third">
+                                        
+                            </ul>
+                        </div>
+                        <div class="details_desc_box" id="introduce">
+                            
+                        </div>
+                        <div class="details_hint_box">
+                            <b>免责声明:</b>
+                            <p>本条采购信息是所展示的供求信息由买卖双方自行提供，其真实性、准确性和合法性由信息发布人负责。阿拉丁商城不提供任何保证，并不承担任何法律责任。阿拉丁商城友情提醒：为保障您的利益，请使用阿拉丁商城委托采购服务，让您交易省时安全放心。</p>
+                        </div>
+                    </div>
+                    <div class="alt-tabs-content"  style="display: none">
+                        <div class="explain_text">
+                            <h2>交易流程</h2>
+                            <h3>采购商和供应商交易流程为：</h3>
+                            <p>供应商发布信息——阿拉丁商城核实信息——阿拉丁寻找对应采购商——采购商接受意向单——阿拉丁下意向单给供应商——供应商接受意向单——采购商付款给阿拉丁——阿拉丁提交付款申请并按付款比例付首款给供应商——供应商发货——采购商确认收货——阿拉丁商城打尾款给供应商——交易完成。</p>
+                            <p>采购商发布信息——阿拉丁商城核实信息——阿拉丁寻找对应供应商——供应商报价——采购商接受报价——采购商提交付款申请并打款给阿拉丁商城——阿拉丁商城按照付款比例给供应商付首款——供应商发货——采购商确认收货——阿拉丁商城打尾款给供应商——交易完成。</p>
+                            <h2>交易规则</h2>
+                            <h3>阿拉丁商城交易争议处理规则</h3>
+                            <p>（1）签约供应商：阿拉丁商城与供应商签署“签约供应商合同”以及“签约供应商服务保障协议”，通过审核后该签约供应商的排名会按照交易笔数在网站上优先展示，获得更大的曝光度。但如出现不诚信行为，阿拉丁商城会与百度等其他网站联合将此供应商列入黑名单，并将其不诚信行为进行全网曝光，并提供给百度、阿里、58同城等电商平台与信息发布平台。</p>
+                            <p>（2）其他供应商：采购商在网站中看到的其他供应商所供应的商品，如需采购需亲自核实信息的准确性和真实性，如出现不诚信的行为，阿拉丁商城不能够提供担保。</p>
+                            <h2>提交订单并锁货</h2>
+                            <h3>打开阿拉丁商城——点击产品供应——立即购买——提交意向订单</h3>
+                            <h2>如何支付？</h2>
+                            <h3>一、支付方式</h3>
+                            通过阿拉丁商城支付：采购商可将货款打入阿拉丁商城账户中，待供应商提供采购商品后，阿拉丁商城将货款打入供应商账户中，双方完成交易。
+                            <h3>二、付款方式：</h3>
+                            <p>1.支付宝</p>
+                            <p>2.网上银行转账</p>
+                            <p>3.银行柜台转账</p>
+                            <h3>三、阿拉丁商城银行账号</h3>
+                            1.中信银行
+                            <p>账户名称：广州阿拉丁物联网络科技股份有限公司</p>
+                            <p>账号：7443 0201 8220 0122 407</p>
+                            <p>开户网点：中信银行广州分行营业部</p>
+                            <h3>四、支付宝账号</h3>
+                            <p>公司名称：广州阿拉丁物联网络科技股份有限公司</p>
+                            <p>支付宝收款账号：alighting999@yeah.net</p>
+                            <h3>五、付款流程：</h3>
+                            <p>1 、供应商选择付款方式（银行汇款/pos机支付）</p>
+                            <p>2、供应商将货款打入阿拉丁商城对公账号</p>
+                            <p>5、阿拉丁商城确认收到货款</p>
+                            <p>6、阿拉丁商城将首款/全款打给采购商</p>
+                            <p>7、采购商发货</p>
+                            <p>8、供应商收货</p>
+                            <p>9、阿拉丁商城将尾款打给采购商</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 这是右侧固定导航栏 -->
+    <div class="float_banner">
+        <div class="float_banner_inner">
+            <a href="javascript:;">
+                <span class="a_fix_box float_banner_ask">
+                    <div class="a_fix_box_l">
+                        在线客服
+                    </div>
+                </span>
+            </a>
+            <span class="a_fix_box icon-feedback">
+                <div class="a_fix_box_l">
+                    意见反馈
+                </div>
+            </span>
+            <span class="a_fix_box icon-ewm">
+                <div class="fix_weixin_box">
+                    <i></i>
+                    <img src="https://www.alighting.com/statics/images/mall_wechat.jpg" alt="">
+                </div>
+            </span>
+            <a href="javascript:;" class="a_fix_box icon-gotop">
+                <div class="a_fix_box_l">
+                    返回顶部
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- 下面是脚步 -->
+    <div class="new-footer-box">
+        <div class="new-footer">
+            <div class="new-footer-logo">
+                <a href="javascript:;">
+                    <img src="https://www.alighting.com/statics/images/footer_l.png" alt="">
+                </a>
+            </div>
+            <dl>
+                <dt>找灯具/配件</dt>
+                <dd>
+                    <a href="javascript:;">我是采购商，如何找货？</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">产品采购流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">买家如何查看卖家报价</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">阿拉丁采购商服务协议</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">委托找货</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>卖灯具/配件</dt>
+                <dd>
+                    <a href="javascript:;">我是供应商，如何卖货？</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">产品出售流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">供应商如何给采购商报价</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">阿拉丁采购商服务协议</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">如何成为签约供应商</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">签约供应商线上注册协议</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">如何提升信誉度</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>交易指南</dt>
+                <dd>
+                    <a href="javascript:;">交易流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">交易规则</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">提交订单并锁货</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">如何支付</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">申请看货</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">网络交易举报投诉制度</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">先行赔付保障计划</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>常见问题</dt>
+                <dd>
+                    <a href="javascript:;">
+                        <img src="https://www.alighting.com//Views/help/SeniorMember/images/kawi.png" alt="">
+                        高级企业会员提供什么服务
+                    </a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">注册/登录流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">无法登录/忘记密码</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">修改账户信息</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">信息发布规则</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">加阿拉丁商城为微信微博好友</a>
+                </dd>
+            </dl>
+            <div class="clr"></div>
+            <div class="login_footer">
+                <div class="footer_msg mx-15">
+                    <span><a href="javascript:;">关于我们</a> &nbsp;</span>|
+                    <span><a href="javascript:;">联系方式</a> &nbsp;</span>|
+                    <span><a href="javascript:;">法律声明</a> &nbsp;</span>|
+                    <span><a href="javascript:;">隐私声明</a> &nbsp;</span>|
+                    <span><a href="javascript:;">服务条款</a> &nbsp;</span>|
+                    <span><a href="javascript:;">最新招聘</a> &nbsp;</span>|
+                    <span><a href="javascript:;">网站地图</a></span>
+                </div>
+                <div class="footer_copyright">
+                    <span>Copyright © 广州阿拉丁物联网络科技股份有限公司 版权所有 |</span>
+                    <span>经营性备案编号粤B2-20150221</span>
+                    <span>
+                        <a href="javascript:;">
+                            <img src="../image/beian_icon.png" alt="">粤公网安备 44010602001351号
+                        </a>
+                    </span>
+                    <span>
+                        <a href="javascript:;">粤ICP备13078266号-3</a>
+                    </span>
+                    <p>
+                        <img src="https://www.alighting.com//statics/images/business_bottom.png" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/details2.js"></script>
+</body>
+
+</html>
