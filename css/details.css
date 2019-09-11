@@ -467,3 +467,20 @@ a{
 .border_blue{
     border-color: #2B86D3 !important;
 }
+.pro-class{
+    position: absolute;
+    width: 228px;
+    z-index: 998;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-top: 0;
+    top: 224px;
+    left: 0;
+}
+.pro-class ul{
+    width: 100%;
+    display: inline-block;   
+}
+.pro-class ul li{
+
+}
