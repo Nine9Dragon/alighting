@@ -467,14 +467,18 @@ a{
 .border_blue{
     border-color: #2B86D3 !important;
 }
+.pro-class-box{
+    position: relative;
+}
 .pro-class{
+    display: none;
     position: absolute;
     width: 228px;
     z-index: 998;
     background: #fff;
     border: 1px solid #e1e1e1;
     border-top: 0;
-    top: 224px;
+    top: 0;
     left: 0;
 }
 .pro-class ul{
@@ -482,5 +486,92 @@ a{
     display: inline-block;   
 }
 .pro-class ul li{
-
+    height: 104px;
+    border-bottom: 1px solid #ebebeb;
+}
+.pro-class ul .pro-class-first{
+    height: 80px;;
+}
+.pro-class ul li h4{
+    height: 20px;
+    padding: 15px 0 10px;
+    text-indent: 15px;
+    color: #666;
+}
+.pro-class p {
+    padding: 0 15px;
+    margin-bottom: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+.pro-class p a {
+    margin-right: 3px;
+    color: #666;
+    max-width: 59px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pro-class p span {
+    color: #c00;
+}
+.details_sprite{
+    background: url("https://www.alighting.com//statics/images/new-index/new-index.png") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon_gz{
+    width: 16px;
+    height: 15px;
+    margin-right: 15px;
+    background-position: -2px -550px;
+}
+.icon_gy{
+    margin-right: 15px;
+    width: 21px;
+    height: 15px;
+    background-position: -138px -301px;
+}
+.icon_dj {
+    margin-right: 15px;
+    width: 12px;
+    height: 17px;
+    background-position: -70px -301px;
+}
+.icon_pt {
+    margin-right: 15px;
+    width: 15px;
+    height: 16px;
+    background-position: -210px -301px;
+}
+.pro-class-all{
+    text-align: center;
+    padding: 15px 0;
+}
+.pro-class-view{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 670px;
+    height: 414px;
+    background-color: #FFF;
+    left: 229px;
+    top: 0;
+    box-shadow: 3px 3px 3px #e9e9e9;
+    border: #1b7dd0 2px solid;
+    border-top: 0;
+    padding: 15px;
+}
+.pro-class-view .pro-class-list li{
+    float: left;
+    width: 133px;
+    height: 32px;
+    line-height: 32px;
+    text-indent: 10px;
+    display: inline-block;
+    overflow: hidden;
+}
+.pro-class ul li:hover{
+    border: 2px solid #1b7dd0;
 }
