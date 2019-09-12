@@ -3,7 +3,7 @@ axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
     var property = JSON.parse(json);
     var html = ``;
     var first = document.getElementById("first");
-    console.log(result.data[0])
+    // console.log(result.data[0])
     html=`
     <div class="store_info_c">
         <div class="info_box">
@@ -108,15 +108,37 @@ axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
     third.innerHTML=li;
     html=``;
     var imgSm = document.getElementById("imgSm")
-    var sm = JSON.parse(result.data[0].sm)
+    var sm = JSON.parse(result.data[0].sm);
+    var i= 0;
     for(var key in sm){
         html+=`
-        <li data-bsrc="">
+        <li data-imgid="${i}">
             <img src="${sm[key]}"  alt="">
         </li>
         `
+        i++
     }
     imgSm.innerHTML = html;
+    html=``;
+
+    var big_img = document.querySelector(".big_img")
+    var lg = JSON.parse(result.data[0].lg)
+    for(var key in lg){
+        if(key == "lg1"){
+            html+=`
+            <li>
+                <img src="${lg[key]}"  alt="">
+            </li>        
+            `
+        }
+        html+=`
+        <li style="display:none">
+            <img src="${lg[key]}"  alt="">
+        </li>
+        `
+    }
+    big_img.innerHTML = html;
+    // imgSm.innerHTML = html;
     html=``;
     var inintroduce = document.getElementById("introduce");
     var ins = result.data[0].introduce;
@@ -159,9 +181,77 @@ axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
             <p class="goods_price">${key.price}</p>
         </li>
         `
+        
     }
     similar_details.innerHTML = html;
 
 }).catch(function (error) {
     console.log(error);
 });
+var tab1 = document.querySelectorAll(".alt-tabs-content")[0];
+var tab2 = document.querySelectorAll(".alt-tabs-content")[1];
+var span1 = document.querySelectorAll(".alt_tabs .tab span")[0];
+var span2 = document.querySelectorAll(".alt_tabs .tab span")[1];
+span1.onclick=function(){
+    span1.setAttribute("class","cur");
+    span2.setAttribute("class","");
+    tab1.style.display="block";
+    tab2.style.display="none";
+}
+span2.onclick=function(){
+    span1.setAttribute("class","");
+    span2.setAttribute("class","cur");
+    tab1.style.display="none";
+    tab2.style.display="block";
+}
+// var smallImgs = document.querySelector(".focus-tabs");
+// var bigImg = document.querySelector(".big_img").firstElementChild.firstElementChild;
+
+// smallImgs.addEventListener("mouseover",function(e){
+//     if(e.target.nodeName=="LI"){
+//        bigImg.setAttribute("src",e.target.dataset.bsrc);
+//        for(var i=0;i<smallImgs.children.length;i++){
+//            smallImgs.children[i].className="";
+//        }
+//        e.target.className="border_blue"
+//     }
+// })
+
+
+
+var navcon_first = document.querySelector(".navcon_first_a");
+var pro_class = document.querySelector(".pro-class"); 
+navcon_first.addEventListener("mouseenter",function(){
+    pro_class.style.display="block"
+})
+navcon_first.addEventListener("mouseleave",function(e){
+    if(e.relatedTarget.closest(".pro-class"))return
+    pro_class.style.display="none"
+})
+pro_class.addEventListener("mouseleave",function(){
+    pro_class.style.display="none"
+})
+var goTop = document.querySelector(".icon-gotop")
+window.onscroll = function () {
+  var aa = document.body.scrollTop || document.documentElement.scrollTop;
+  if (aa > 10) {
+    goTop.style.display = "block"
+  } else {
+    goTop.style.display = "none"
+  }
+}
+goTop.onclick = function () {
+  window.scrollTo(0, 0);
+}
+var focus_tabs = document.querySelector(".focus-tabs");
+var big_img = document.querySelector(".big_img")
+focus_tabs.addEventListener("mouseover",function(e){
+    if(e.target.nodeName == "LI"){
+        for(var i=0;i< big_img.children.length;i++){
+            big_img.children[i].style.display="none"
+            if(i==e.target.dataset.imgid){
+                big_img.children[i].style.display="block"
+            }
+        }
+    }
+})

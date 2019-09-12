@@ -485,7 +485,7 @@ a{
     width: 100%;
     display: inline-block;   
 }
-.pro-class ul li{
+.pro-class>ul>li{
     height: 104px;
     border-bottom: 1px solid #ebebeb;
 }
@@ -572,6 +572,21 @@ a{
     display: inline-block;
     overflow: hidden;
 }
-.pro-class ul li:hover{
+.pro-class .pro-class-ul>.pro-class-first:hover{
+    border-left: 2px solid #1b7dd0;
+    border-bottom: 2px solid #1b7dd0;
+}
+.pro-class .pro-class-ul>li:hover{
     border: 2px solid #1b7dd0;
+    border-right: 0;
+}
+.pro-class .pro-class-ul>li:hover .pro-class-view{
+    display: block;
+}
+.pro-class .pro-class-ul>li:hover .hide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-right: 3px solid #FFF;
+    z-index: 1000;
 }

@@ -14,16 +14,19 @@ span2.onclick=function(){
     tab1.style.display="none";
     tab2.style.display="block";
 }
-var smallImgs = document.querySelector(".focus-tabs");
-var bigImg = document.querySelector(".big_img").firstElementChild.firstElementChild;
 
-smallImgs.addEventListener("mouseover",function(e){
-    if(e.target.nodeName=="LI"){
-       bigImg.setAttribute("src",e.target.dataset.bsrc);
-       for(var i=0;i<smallImgs.children.length;i++){
-           smallImgs.children[i].className="";
-       }
-       e.target.className="border_blue"
+var focus_tabs = document.querySelector(".focus-tabs");
+var big_img = document.querySelector(".big_img")
+console.log(big_img)
+console.log(focus_tabs)
+focus_tabs.addEventListener("mouseover",function(e){
+    if(e.target.nodeName == "LI"){
+        for(var i=0;i< big_img.children.length;i++){
+            big_img.children[i].style.display="none"
+            if(i==e.target.dataset.imgid){
+                big_img.children[i].style.display="block"
+            }
+        }
     }
 })
 
@@ -41,3 +44,18 @@ navcon_first.addEventListener("mouseleave",function(e){
 pro_class.addEventListener("mouseleave",function(){
     pro_class.style.display="none"
 })
+
+
+
+var goTop = document.querySelector(".icon-gotop")
+window.onscroll = function () {
+  var aa = document.body.scrollTop || document.documentElement.scrollTop;
+  if (aa > 10) {
+    goTop.style.display = "block"
+  } else {
+    goTop.style.display = "none"
+  }
+}
+goTop.onclick = function () {
+  window.scrollTo(0, 0);
+}
