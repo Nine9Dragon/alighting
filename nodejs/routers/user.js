@@ -62,4 +62,7 @@ router.get("/snzm",(req,res)=>{
     })
 })
 
+
+
+
 module.exports = router;

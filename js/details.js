@@ -17,8 +17,6 @@ span2.onclick=function(){
 
 var focus_tabs = document.querySelector(".focus-tabs");
 var big_img = document.querySelector(".big_img")
-console.log(big_img)
-console.log(focus_tabs)
 focus_tabs.addEventListener("mouseover",function(e){
     if(e.target.nodeName == "LI"){
         for(var i=0;i< big_img.children.length;i++){

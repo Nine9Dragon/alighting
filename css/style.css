@@ -26,3 +26,34 @@ a:active{
 .zIndex1{
     z-index: 1;
 }
+.lh30{
+    line-height: 30px;
+}
+.mBtm10{
+    margin-bottom: 10px;
+}
+.c999 {
+    color: #999!important;
+}
+.mLeft20 {
+    margin-left: 20px;
+}
+.text-left {
+    text-align: left !important;
+}
+i{
+    font-style: normal;
+}
+
+.mRight20 {
+    margin-right: 20px;
+}
+.mTop10 {
+    margin-top: 10px;
+}
+.cf60 {
+    color: #f60!important;
+}
+.f16 {
+    font-size: 16px !important;
+}

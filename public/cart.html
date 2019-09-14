@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/login-reg.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+    <div class="top-link">
+        <div class="w1190">
+            <div class="top-link-left">
+                <ul class="top-link-left-login">
+                    <li>
+                        <a href="javascript:;" class="unLogin">登录</a>
+                        <span style="color:#aaa;display:none" class="isLogin"></span>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="unLogin">免费注册</a>
+                        <a href="javascript:logOut();" style="display:none" class="isLogin">注销</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="top-link-right-ul">
+                <li><a href="javascript:;">商城首页</a></li>
+                <li class="second_li"><a href="javascript:;">我的阿拉丁<img src="../image/下箭头.png"></a>
+                    <ul class="ui-corner-all">
+                        <li><a href="javascript:;">采购商</a></li>
+                        <li><a href="javascript:;">已买到产</a></li>
+                        <li><a href="javascript:;">待付款</a></li>
+                        <li><a href="javascript:;">供应商</a></li>
+                        <li><a href="javascript:;">已卖出产</a></li>
+                        <li><a href="javascript:;">代发货</a></li>
+                        <li><a href="javascript:;">管理产品</a></li>
+                    </ul>
+                </li>
+                <li class="third_li">
+                    <a href="javascript:;" style="padding-left:0;">
+                        <img src="../image/购物车.png" class="image-car">采购车<img src="../image/下箭头.png">
+                    </a>
+                    <ul class="ui-corner-all">
+                        <li>
+                            <dd class="shoping-car-img">
+                                <span></span>
+                                您采购车里还没有任何宝贝。
+                            </dd>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">帮助中心</a></li>
+                <li><a href="javascript:;">下载到桌面</a></li>
+                <li><a href="javascript:;">添加收藏</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="top_login">
+        <div class="top_login_m">
+            <a href="javascript:;"><img src="https://www.alighting.com/statics/images/logo.gif"></a>
+            <h1>采购车</h1>
+            <ul class="floatR ">
+                <li>
+                    <span>查看采购车</span>
+                    <div class="now"></div>
+                    <i class="checki">1</i>
+                </li>
+                <li>
+                    <span>确认订单信息</span>
+                    <div></div>
+                    <i>2</i>
+                </li>
+                <li>
+                    <span>选择付款方式</span>
+                    <div></div>
+                    <i>3</i>
+                </li>
+                <li>
+                    <span>确认收货</span>
+                    <div></div>
+                    <i>4</i>
+                </li>
+                <li>
+                    <span>完成订单</span>
+                    <div></div>
+                    <i>5</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper" id="cart_del">
+        
+    </div>
+
+    <!-- 脚步样式 -->
+    <div class="new-footer-box">
+        <div class="new-footer">
+            <div class="new-footer-logo">
+                <a href="javascript:;">
+                    <img src="https://www.alighting.com/statics/images/footer_l.png" alt="">
+                </a>
+            </div>
+            <dl>
+                <dt>找灯具/配件</dt>
+                <dd>
+                    <a href="javascript:;">我是采购商，如何找货？</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">产品采购流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">买家如何查看卖家报价</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">阿拉丁采购商服务协议</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">委托找货</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>卖灯具/配件</dt>
+                <dd>
+                    <a href="javascript:;">我是供应商，如何卖货？</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">产品出售流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">供应商如何给采购商报价</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">阿拉丁采购商服务协议</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">如何成为签约供应商</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">签约供应商线上注册协议</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">如何提升信誉度</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>交易指南</dt>
+                <dd>
+                    <a href="javascript:;">交易流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">交易规则</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">提交订单并锁货</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">如何支付</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">申请看货</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">网络交易举报投诉制度</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">先行赔付保障计划</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>常见问题</dt>
+                <dd>
+                    <a href="javascript:;">
+                        <img src="https://www.alighting.com//Views/help/SeniorMember/images/kawi.png" alt="">
+                        高级企业会员提供什么服务
+                    </a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">注册/登录流程</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">无法登录/忘记密码</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">修改账户信息</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">信息发布规则</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">加阿拉丁商城为微信微博好友</a>
+                </dd>
+            </dl>
+            <div class="clr"></div>
+            <div class="friendlinks">
+                <table>
+                    <tr>
+                        <td class="friend-first">
+                            <a href="javascript:;" style="display: inline;">友情链接：</a>
+                        </td>
+                        <td style="text-align: left;">
+                            <a href="javascript:;">阿拉丁照明网</a>
+                            <a href="javascript:;">阿拉丁国际站</a>
+                            <a href="javascript:;">阿拉丁VIP网</a>
+                            <a href="javascript:;">中国照明网</a>
+                            <a href="javascript:;">LED & Lighting</a>
+                            <a href="javascript:;">照明人才网</a>
+                            <a href="javascript:;">365好登</a>
+                            <a href="javascript:;">美乐乐(照明网)</a>
+                            <a href="javascript:;">古镇灯饰网</a>
+                            <a href="javascript:;">中国标识网</a>
+                            <a href="javascript:;">淮安房产新闻</a>
+                            <a href="javascript:;">苏州装修网</a>
+                            <a href="javascript:;">中国门窗网</a>
+                            <a href="javascript:;">家居在线</a>
+                            <a href="javascript:;">尚品宅配</a>
+                            <a href="javascript:;">建材购物网</a>
+                            <a href="javascript:;">中国LED网</a>
+                            <a href="javascript:;">城市亮化工程</a>
+                            <a href="javascript:;">四川招标网</a>
+                            <a href="javascript:;">大连房产网</a>
+                            <a href="javascript:;">中国卫浴网</a>
+                            <a href="javascript:;">江苏路灯网</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clr"></div>
+            <div class="login_footer">
+                <div class="footer_msg mx-15">
+                    <span><a href="javascript:;">关于我们</a> &nbsp;</span>|
+                    <span><a href="javascript:;">联系方式</a> &nbsp;</span>|
+                    <span><a href="javascript:;">法律声明</a> &nbsp;</span>|
+                    <span><a href="javascript:;">隐私声明</a> &nbsp;</span>|
+                    <span><a href="javascript:;">服务条款</a> &nbsp;</span>|
+                    <span><a href="javascript:;">最新招聘</a> &nbsp;</span>|
+                    <span><a href="javascript:;">网站地图</a></span>
+                </div>
+                <div class="footer_copyright">
+                    <span>Copyright © 广州阿拉丁物联网络科技股份有限公司 版权所有 |</span>
+                    <span>经营性备案编号粤B2-20150221</span>
+                    <span>
+                        <a href="javascript:;">
+                            <img src="../image/beian_icon.png" alt="">粤公网安备 44010602001351号
+                        </a>
+                    </span>
+                    <span>
+                        <a href="javascript:;">粤ICP备13078266号-3</a>
+                    </span>
+                    <p>
+                        <img src="https://www.alighting.com//statics/images/business_bottom.png" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>

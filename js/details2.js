@@ -1,5 +1,6 @@
 axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
-    var json = result.data[0].property;
+    (function (){
+        var json = result.data[0].property;
     var property = JSON.parse(json);
     var html = ``;
     var first = document.getElementById("first");
@@ -70,7 +71,7 @@ axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
        html+= ` </ul>
             </div>
             <div class="tab_botton_box">
-                <input type="button" value="立即询价">
+                <input type="button" value="加入购物车" id="addCart">
                 <div class="loan_hint">
                     <span>委托阿拉丁采购，可获得长期稳定货源。拨打
                         <b>020-32615598 </b>
@@ -159,7 +160,38 @@ axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
                 </strong>
             </p>`
     inintroduce.innerHTML=html;
-   
+    } )();  
+    var addCart = document.getElementById("addCart");
+    console.log(addCart)
+    addCart.addEventListener("click",function(){
+        var data = result.data[0];
+        var details_id = data.did;
+        var company = data.company;
+        var linkman = data.linkman;
+        var phone = data.phone;
+        var img = JSON.parse(data.sm).sm1;
+        var title = data.title;
+        var price = data.price;
+        var count = 1;
+        var data = {
+            details_id,
+            company,
+            linkman,
+            phone,
+            img,
+            title,
+            price,
+            count
+        }
+        axios.defaults.withCredentials = true
+        axios.get("http://127.0.0.1:3000/product/addCart",{  //params参数必写 , 如果没有参数传{}也可以
+            params:data
+        }).then(result=>{
+            console.log(result);
+        }).catch(function(err){
+            console.log(err);
+        });
+    })
   })
   .catch(function (error) {
     console.log(error);
