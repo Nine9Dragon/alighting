@@ -1,4 +1,6 @@
-axios.get("http://127.0.0.1:3000/product/details2").then(result=> {
+var did = location.search.split("=")[1];
+var data = {did}
+axios.get("http://127.0.0.1:3000/product/details2",{params:data}).then(result=> {
     (function (){
         var json = result.data[0].property;
     var property = JSON.parse(json);
