@@ -193,6 +193,9 @@
     font-size: 16px;
     font-weight: bold;
 }
+i{
+  cursor: pointer;
+}
 
 /* 错误 */
 .bruce {

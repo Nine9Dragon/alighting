@@ -55,7 +55,7 @@ router.get("/addCart", (req, res) => {
 router.get("/searchCart",(req,res)=>{
     if(req.session.uid){
         var userid = req.session.uid;
-        var sql = "SELECT company,linkman,phone,img,title,price, count,details_id FROM alt_cart WHERE userid = ?"
+        var sql = "SELECT cid,company,linkman,phone,img,title,price, count,details_id FROM alt_cart WHERE userid = ?"
         pool.query(sql,[userid],(err,result)=>{
             if(err) throw err;
             console.log(result);
@@ -64,6 +64,17 @@ router.get("/searchCart",(req,res)=>{
     }else{
         res.send({code:0,data:"请登录"});
     }
+})
+
+router.get("/del",(req,res)=>{
+    var cid = req.query.cid;
+    // console.log(cid)
+    var sql = "DELETE FROM alt_cart WHERE cid = ? ";
+    pool.query(sql,[cid],(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        res.send("1");
+    })
 })
 
 module.exports = router;

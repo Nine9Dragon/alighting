@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/login-reg.css">
+
     <style>
         body {
             background: #FFF !important;
@@ -47,12 +48,39 @@
                     <a href="./cart.html" style="padding-left:0;">
                         <img src="../image/购物车.png" class="image-car">采购车<img src="../image/下箭头.png">
                     </a>
-                    <ul class="ui-corner-all">
+                    <ul class="ui-corner-all" id="unLog_cart">
                         <li>
                             <dd class="shoping-car-img">
                                 <span></span>
                                 您采购车里还没有任何宝贝。
                             </dd>
+                        </li>
+                    </ul>
+                    <ul class="ui-corner-all cart_ul menu_cart clearfix" style="display: none" id="login_cart">
+                        <li class="clearfix">
+                            <dl>
+                                <dt>
+                                    <b>最新加入的产品</b>
+                                </dt>
+                                <dd>
+                                    <a href="javascript:;">
+                                        <img src="http://statics.aldgo.com/201909/201909071025248645_60_60.jpg" alt="">
+                                    </a>
+                                    <p><a href="javascript:;">50w一体化太阳能路灯生产厂家</a></p>
+                                    <p class="c999">
+                                        <span>
+                                            <em class="cf60">¥132.00 </em>  X1
+                                        </span>
+                                        <a href="javascript:;" class="delete_a"></a>
+                                    </p>
+                                </dd>
+                                <dd class="center">
+                                    共<span class="cf60">1</span>件产品   共计<span class="cf60">¥132.00</span>
+                                </dd>
+                                <dd class="item_link_btn"> 
+                                    <a href="javascript:;" class="btn-go-purchasing">去购物车结算</a>
+                                </dd>
+                            </dl>
                         </li>
                     </ul>
                 </li>
@@ -2369,6 +2397,7 @@
     </div>
     <script src="../js/main.js"></script>
     <script src="../js/jquery-1.11.3.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         (function () {
             $.ajax({
@@ -2379,7 +2408,71 @@
                         $(".unLogin").css("display", "none");
                         $(".isLogin").css("display", "block");
                         $("span.isLogin").html("Welcome  " + result.data);
-                        $("#username").html(result.data)
+                        $("#username").html(result.data);
+                        axios.defaults.withCredentials = true;
+                        axios.get("http://127.0.0.1:3000/product/searchCart").then(result=>{
+                            var html = ``;
+                            var data = result.data.data;
+                            if(result.data.data.length>0){
+                                var i = 0;
+                                var sum = 0;
+                                html+=`<a href="./cart.html" style="padding-left:0;">
+                                    <img src="../image/购物车.png" class="image-car">采购车<img src="../image/下箭头.png">
+                                    </a>
+                                    <ul class="ui-corner-all cart_ul menu_cart clearfix">
+                                        <li class="clearfix">
+                                            <dl>
+                                    <dt>
+                                        <b>最新加入的产品</b>
+                                    </dt>`
+                                    for(var key in data){
+                                        i++;
+                                        sum+=data[key].price*data[key].count;
+                                        html+=`
+                                        <dd>
+                                            <a href="javascript:;">
+                                                <img src="${data[key].img}" alt="">
+                                            </a>
+                                            <p><a href="javascript:;">${data[key].title}</a></p>
+                                            <p class="c999">
+                                                <span>
+                                                    <em class="cf60">¥${data[key].price.toFixed(2)}</em>  X${data[key].count}
+                                                </span>
+                                                <a href="javascript:;" data-cid="${data[key].cid}" class="delete_a"></a>
+                                            </p>
+                                        </dd>
+                                        `
+                                        
+                                    }
+                                    
+                                    html+=`
+                                            <dd class="center">
+                                                    共<span class="cf60">${i}</span>件产品   共计<span class="cf60">¥${sum.toFixed(2)}</span>
+                                                </dd>
+                                            <dd class="item_link_btn"> 
+                                                <a href="javascript:;" class="btn-go-purchasing"">去购物车结算</a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>`
+                                $(".third_li").html(html);
+                                var aaa = document.querySelector(".delete_a");
+                                aaa.addEventListener("click",function(e){
+                                    var cid = e.target.dataset.cid;
+                                    console.log(cid);
+                                    var data = {cid}
+                                    axios.get("http://127.0.0.1:3000/product/del",{  //params参数必写 , 如果没有参数传{}也可以
+                                        params:data
+                                    }).then(result=>{
+                                        console.log(result);
+                                    }).catch(err=>{
+                                        console.log(err);
+                                    })
+                                })
+                            }
+                        // $(".btn-go-purchasing")[0].click(del);
+                        });
+                        
                     } else {
                         console.log(result.msg);
                     }
