@@ -76,7 +76,7 @@ a{
 .err_tip{
     position: relative;
     margin: 20px 0 10px;
-    padding-left:20px;
+    padding-left:40px;
     font-size: 12px;
     line-height: 25px;
     height: 25px;
@@ -120,6 +120,26 @@ a{
     margin: 10px 0;
     font-size:12px;
     color:#959595;
+}
+.err_icon{
+    position: absolute;
+    top: 6px;
+    left: 14px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url("https://www.alighting.com/statics/images/user/user-icon.png?_d_id=27610e63a01b2324720916ef666b29") -104px -49px;
+}
+.login_ino em{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 37px;
+    height: 37px;
+    background:url("https://www.alighting.com/statics/images/user/user-icon.png?_d_id=27610e63a01b2324720916ef666b29")
+}
+.upwd_icon{
+    background-position: -48px 0 !important;
 }
 /*登录*/
 .reg_box{
