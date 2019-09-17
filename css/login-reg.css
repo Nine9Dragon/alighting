@@ -84,6 +84,11 @@ a{
     border: 1px solid #E1C7AB;
     color: #959595;
 }
+.error{
+    border: 1px solid #EC0006;
+    background: #FFEDED;
+    color: #d82618;
+}
 .err_tip span{
     font-size: 12px;
     text-align: center;
@@ -102,7 +107,7 @@ a{
 .check_in{
     padding:0 0 15px 0;
 }
-.login_ino div a{
+.login_ino div>a{
     float: right;
     font-size: 10px;
     color: #000;
@@ -138,9 +143,40 @@ a{
     height: 37px;
     background:url("https://www.alighting.com/statics/images/user/user-icon.png?_d_id=27610e63a01b2324720916ef666b29")
 }
-.upwd_icon{
-    background-position: -48px 0 !important;
+.login_ino .upwd_icon{
+    background-position: -48px 0 ;
 }
+.tpos_list li{
+    float: left;
+    margin-right: 10px;
+}
+.login_icon{
+    display: inline-block;
+    width: 27px;
+    height: 25px;
+    background: url("https://www.alighting.com/statics/images/user/tpos_icon.png") 
+}
+.icon_qq{
+    background-position:  -6px -32px;
+}
+.icon_web{
+    background-position:  -43px -32px;
+}
+.icon_wx{
+    background-position:  -79px -32px;
+}
+.icon_qq:hover{
+    background-position:  -6px 0;
+}
+.icon_web:hover{
+    background-position:  -43px 0;
+}
+.icon_wx:hover{
+    background-position:  -79px 0;
+}
+
+
+
 /*登录*/
 .reg_box{
     padding: 60px 80px;
