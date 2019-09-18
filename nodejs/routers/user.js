@@ -25,6 +25,20 @@ router.post("/login", (req, res) => {
     })
 })
 
+router.post("/hasReg",(req,res)=>{
+    var uname = req.body.uname;
+    console.log(uname);
+    var sql = "SELECT uid FROM alt_user WHERE alt_userName=?";
+    pool.query(sql,[uname],(err,result)=>{
+        if(err)throw err;
+        if(result.length > 0){
+            res.send({code:1,msg:"用户已存在"});
+        }else{
+            res.send({code:0,msg:"用户名可用"})
+        }
+    })
+})
+
 router.post("/reg", (req, res) => {
     const {
         uname,
