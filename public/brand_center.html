@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/login-reg.css">
+    <link rel="stylesheet" href="../css/details.css">
+
 </head>
 
 <body>
@@ -17,17 +19,68 @@
             <div class="top-link-left">
                 <ul class="top-link-left-login">
                     <li>
-                        <a href="javascript:;">登录</a>
+                        <a href="javascript:;" class="unLogin">登录</a>
+                        <span style="color:#aaa;display:none" class="isLogin"></span>
                     </li>
                     <li>
-                        <a href="javascript:;">免费注册</a>
+                        <a href="javascript:;" class="unLogin">免费注册</a>
+                        <a href="javascript:logOut();" style="display:none" class="isLogin">注销</a>
                     </li>
                 </ul>
             </div>
             <ul class="top-link-right-ul">
                 <li><a href="javascript:;">商城首页</a></li>
-                <li><a href="javascript:;">我的阿拉丁<img src="image/下箭头.png"></a></li>
-                <li><a href="javascript:;"><img src="image/购物车.png" class="image-car">采购车<img src="image/下箭头.png"></a></li>
+                <li class="second_li"><a href="javascript:;">我的阿拉丁<img src="../image/下箭头.png"></a>
+                    <ul class="ui-corner-all">
+                        <li><a href="javascript:;">采购商</a></li>
+                        <li><a href="javascript:;">已买到产</a></li>
+                        <li><a href="javascript:;">待付款</a></li>
+                        <li><a href="javascript:;">供应商</a></li>
+                        <li><a href="javascript:;">已卖出产</a></li>
+                        <li><a href="javascript:;">代发货</a></li>
+                        <li><a href="javascript:;">管理产品</a></li>
+                    </ul>
+                </li>
+                <li class="third_li">
+                    <a href="./cart.html" style="padding-left:0;">
+                        <img src="../image/购物车.png" class="image-car">采购车<img src="../image/下箭头.png">
+                    </a>
+                    <ul class="ui-corner-all" id="unLog_cart">
+                        <li>
+                            <dd class="shoping-car-img">
+                                <span></span>
+                                您采购车里还没有任何宝贝。
+                            </dd>
+                        </li>
+                    </ul>
+                    <ul class="ui-corner-all cart_ul menu_cart clearfix" style="display: none" id="login_cart">
+                        <li class="clearfix">
+                            <dl>
+                                <dt>
+                                    <b>最新加入的产品</b>
+                                </dt>
+                                <dd>
+                                    <a href="javascript:;">
+                                        <img src="http://statics.aldgo.com/201909/201909071025248645_60_60.jpg" alt="">
+                                    </a>
+                                    <p><a href="javascript:;">50w一体化太阳能路灯生产厂家</a></p>
+                                    <p class="c999">
+                                        <span>
+                                            <em class="cf60">¥132.00 </em>  X1
+                                        </span>
+                                        <a href="javascript:;" class="delete_a"></a>
+                                    </p>
+                                </dd>
+                                <dd class="center">
+                                    共<span class="cf60">1</span>件产品   共计<span class="cf60">¥132.00</span>
+                                </dd>
+                                <dd class="item_link_btn"> 
+                                    <a href="javascript:;" class="btn-go-purchasing">去购物车结算</a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="javascript:;">帮助中心</a></li>
                 <li><a href="javascript:;">下载到桌面</a></li>
                 <li><a href="javascript:;">添加收藏</a></li>
@@ -37,18 +90,12 @@
     <div class="clearfix bg-white">
         <div class="w1190 clearfix">
             <div class="logo-box left">
-                <h1>
-                    <a href="javascript:;">
-                        <div class="left"
-                            style="width: 230px;height: 80px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 1px 0;">
-                        </div>
-                    </a>
-                    <a href="javascript:;">
-                        <div class="left"
-                            style="width: 200px;height: 91px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 2px -128px;">
-                        </div>
-                    </a>
-                </h1>
+                <a class="left" href="javascript:;"
+                    style="width: 230px;height: 80px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 1px 0;">
+                </a>
+                <a class="left"
+                    style="width: 200px;height: 91px;background: url(https://www.alighting.com/statics/images/header-img.png) no-repeat 2px -128px;">
+                </a>
             </div>
             <form class="head-search">
                 <div class="head-search-box">
@@ -58,9 +105,24 @@
                         <span>求购</span>
                     </div>
                     <div class="head-search-box-text">
-                        <input type="text" class="left input-keyword" placeholder="请输入关键词">
-                        <input type="submit" class="input-submit" value="搜索">
+                        <div class="input-hover">
+                            <input type="text" class="left input-keyword" placeholder="请输入关键词，如：3头水晶吊灯  白色10w筒灯">
+                            <div class="near-hot-search">
+                                <h5>大家都在找</h5>
+                                <ul class="clearfix">
+                                    <li><a href="javascript:;">吊灯</a></li>
+                                    <li><a href="javascript:;">吸顶灯</a></li>
+                                    <li><a href="javascript:;">台灯</a></li>
+                                    <li><a href="javascript:;">投光/投射灯</a></li>
+                                    <li><a href="javascript:;">简灯</a></li>
+                                    <li><a href="javascript:;">面板灯</a></li>
+                                    <li><a href="javascript:;">路灯</a></li>
+                                    <li><a href="javascript:;">天花射灯</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <input type="submit" class="input-submit" value="搜索">
                 </div>
             </form>
             <div class="logo-box right">
@@ -75,7 +137,7 @@
     <div class="brand_middle clearfix">
         <div class="nav">
             <div class="navcon w1190">
-                <a class="navcon_first_a" href="javascript:;">产品分类</a>
+                <a class="navcon_first_a" style="width: 230px" href="javascript:;">产品分类</a>
                 <ul>
                     <li>
                         <a href="./index.html">首页</a>
@@ -99,6 +161,221 @@
                         <a href="javascript:;">广州照明国际展(光亚展)</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pro-class-box w1190">
+        <div class="pro-class">
+            <ul class="pro-class-ul">
+                <li class="pro-class-first">
+                    <div class="hide">
+                        <h4>
+                            <i class="details_sprite icon_gz"></i>
+                            <span>我的关注</span>
+                        </h4>
+                        <p>
+                            <a href="javascript:;">筒灯</a>
+                            <a href="javascript:;">天花射灯</a>
+                            <a href="javascript:;">轨道射灯</a>
+                        </p>
+                    </div>
+                    <div class="pro-class-view">
+                        <ul class="pro-class-list">
+                            <li>
+                                <a href="javascript:;">筒灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">天花射灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">轨道射灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">面板灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED球泡灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED灯管</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED灯杯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">SMD贴片灯珠</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">COB LED光源</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">大功率集成LED光源</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="hide">
+
+                        <h4>
+                            <i class="details_sprite icon_gy"></i>
+                            <span>光源</span>
+                        </h4>
+                        <p>
+                            <a href="javascript:;">SMD贴片灯珠</a>
+                            <a href="javascript:;">COB LED光源</a>
+                            <a href="javascript:;">大功率集成LED光源</a>
+                        </p>
+                        <p>昨日成交<span>100</span>单</p>
+                    </div>
+                    <div class="pro-class-view">
+                        <ul class="pro-class-list">
+                            <li>
+                                <a href="javascript:;">SMD贴片灯珠</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">COB LED光源</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">大功率集成LED光源</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">光引擎（LED模组）</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">其他LED灯珠</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED球泡灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED灯管</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED灯杯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED蜡烛灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED玉米灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LED灯丝灯</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">节能灯</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="hide">
+                        <h4>
+                            <i class="details_sprite icon_dj"></i>
+                            <span>灯具</span>
+                        </h4>
+                        <p>
+                            <a href="javascript:;">筒灯</a>
+                            <a href="javascript:;">天花射灯</a>
+                            <a href="javascript:;">面板灯</a>
+                        </p>
+                        <p>昨日成交<span>100</span>单</p>
+                    </div>
+                    <div class="pro-class-view">
+                        <ul class="pro-class-list">
+                            <li><a href="javascript:;">筒灯</a></li>
+
+                            <li><a href="javascript:;">天花射灯</a></li>
+
+                            <li><a href="javascript:;">面板灯</a></li>
+
+                            <li><a href="javascript:;">轨道射灯</a></li>
+
+                            <li><a href="javascript:;">格栅灯盘</a></li>
+
+                            <li><a href="javascript:;">LED灯带/软条灯</a></li>
+
+                            <li><a href="javascript:;">室内线条灯</a></li>
+
+                            <li><a href="javascript:;">格栅射灯/豆胆灯/斗胆灯</a></li>
+
+                            <li><a href="javascript:;">吊灯</a></li>
+
+                            <li><a href="javascript:;">吸顶灯</a></li>
+
+                            <li><a href="javascript:;">落地灯</a></li>
+
+                            <li><a href="javascript:;">台灯</a></li>
+
+                            <li><a href="javascript:;">壁灯</a></li>
+
+                            <li><a href="javascript:;">路灯</a></li>
+
+                            <li><a href="javascript:;">投光灯/投射灯</a></li>
+
+                            <li><a href="javascript:;">泛光灯</a></li>
+
+                            <li><a href="javascript:;">洗墙灯/条形投光灯/线条灯</a></li>
+
+                            <li><a href="javascript:;">户外壁灯</a></li>
+
+                            <li><a href="javascript:;">工矿灯/高棚灯</a></li>
+
+                            <li><a href="javascript:;">地埋灯</a></li>
+
+                            <li><a href="javascript:;">防爆灯</a></li>
+
+                            <li><a href="javascript:;">三防灯</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="hide">
+                        <h4>
+                            <i class="details_sprite icon_pt"></i>
+                            <span>配套件/元器件</span>
+                        </h4>
+                        <p>
+                            <a href="javascript:;">LED驱动电源</a>
+                            <a href="javascript:;">开关电源</a>
+                            <a href="javascript:;">IC</a>
+                        </p>
+                        <p>昨日成交<span>100</span>单</p>
+                    </div>
+                    <div class="pro-class-view">
+                        <ul class="pro-class-list">
+                            <li><a href="javascript:;">LED驱动电源</a></li>
+
+                            <li><a href="javascript:;">开关电源</a></li>
+
+                            <li><a href="javascript:;">IC</a></li>
+
+                            <li><a href="javascript:;">电容</a></li>
+
+                            <li><a href="javascript:;">LED透镜</a></li>
+
+                            <li><a href="javascript:;">灯头/灯座</a></li>
+
+                            <li><a href="javascript:;">套件</a></li>
+
+                            <li><a href="javascript:;">外壳</a></li>
+
+                            <li><a href="javascript:;">散热件</a></li>
+
+                            <li><a href="javascript:;">塑料灯管</a></li>
+
+                            <li><a href="javascript:;">灌封胶</a></li>
+
+                            <li><a href="javascript:;">端子/端子台</a></li>
+
+                            <li><a href="javascript:;">红外感应器</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="pro-class-all">
+                <a href="javascript:;">全部产品分类</a>
             </div>
         </div>
     </div>
@@ -1093,6 +1370,7 @@
             </div>
         </div>
     </div>
+    <script src="../js/brand_center.js"></script>
 </body>
 
 </html>
