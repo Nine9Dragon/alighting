@@ -3,6 +3,7 @@ var upwd = document.getElementsByName("upwd")[0];
 var password = document.getElementsByName("password")[0];
 var phone = document.getElementsByName("phone")[0];
 var check = /^[\w-]{4,20}$/;
+var checkPhone = /^1[345678]\d{9}$/
 
 uname.addEventListener("focus",function(){
     var info = uname.parentElement.nextElementSibling;
@@ -48,5 +49,23 @@ upwd.addEventListener("blur",function(){
     }else{
         info.innerHTML="密码只能用英文、数字及 -、_ 组成的4-20位字符"
         info.style.color="#d82618"
+    }
+})
+password.addEventListener("blur",function(){
+    var info = password.parentElement.nextElementSibling;
+    if(password.value==upwd.value){
+        info.innerHTML = "";
+    }else{
+        info.innerHTML="两次密码不一致"
+        info.style.color="#d82618"
+    }
+})
+
+phone.addEventListener("blur",function(){
+    console.log(phone.value)
+    var info = phone.parentElement.nextElementSibling;
+    if(!checkPhone.test(phone.value)){
+        info.innerHTML = "手机号格式不正确";
+        info.style.color="#d82618";
     }
 })
