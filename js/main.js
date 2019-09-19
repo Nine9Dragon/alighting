@@ -11,6 +11,21 @@ goTop.onclick = function () {
   window.scrollTo(0, 0);
 }
 
+var search = document.getElementById("search")
+var searchBtn = document.querySelector(".input-submit");
+search.addEventListener("input",function(){})
+searchBtn.addEventListener("click",function(){
+  if(search.value){
+    axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
+      console.log(res)
+    }).catch(err=>{
+      console.log(err);
+    })
+  }
+})
+
+
+
 //首页轮播图
 var ul = document.querySelectorAll(".ppt ul")[0]
 var list = ul.children;

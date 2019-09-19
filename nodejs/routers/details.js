@@ -78,4 +78,19 @@ router.get("/del",(req,res)=>{
     })
 })
 
+router.post("/searchDetail",(req,res)=>{
+    var title = req.body.title;
+    var title = `%${title}%`
+    var sql = "SELECT id FROM `alt_details` WHERE title LIKE ?"
+    pool.query(sql,[title],(err,result)=>{
+        if(err) throw err;
+        if(result.length){
+            console.log(result);
+            res.send({code:1,msg:"查询成功"})
+        }else{
+            res.send({code:0,msg:"未找到商品"})
+        }
+    })
+})
+
 module.exports = router;

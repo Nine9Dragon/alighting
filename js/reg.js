@@ -2,6 +2,7 @@ var uname = document.getElementsByName("uname")[0];
 var upwd = document.getElementsByName("upwd")[0];
 var password = document.getElementsByName("password")[0];
 var phone = document.getElementsByName("phone")[0];
+var reg_btn = document.getElementsByClassName("reg_btn")[0];
 var check = /^[\w-]{4,20}$/;
 var checkPhone = /^1[345678]\d{9}$/
 
@@ -12,7 +13,6 @@ uname.addEventListener("focus",function(){
 })
 uname.addEventListener("blur",function(){
     var info = uname.parentElement.nextElementSibling;
-    console.log(uname.value);
     if(!uname.value){
         info.innerHTML="用户名不能为空"
         info.style.color="#d82618";
@@ -62,10 +62,35 @@ password.addEventListener("blur",function(){
 })
 
 phone.addEventListener("blur",function(){
-    console.log(phone.value)
     var info = phone.parentElement.nextElementSibling;
     if(!checkPhone.test(phone.value)){
         info.innerHTML = "手机号格式不正确";
         info.style.color="#d82618";
     }
 })
+
+
+reg_btn.addEventListener("click",function(){
+    if(uname.value){
+        if(uname.parentElement.nextElementSibling.innerHTML=="用户名可用"){
+            if(check.test(upwd.value)){
+                if(uname.value!==upwd.value){
+                    if(password.value==upwd.value){
+                        if(checkPhone.test(phone.value)){
+                            axios.post("http://127.0.0.1:3000/user/reg",`uname=${uname.value}&upwd=${password.value}`).then(result=>{
+                                if(result.data){
+                                    window.open("./login.js","_self");
+                                }
+                            }).catch(err=>{
+                                console.log(err);
+                            })
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+
+
+
