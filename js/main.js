@@ -13,16 +13,36 @@ goTop.onclick = function () {
 
 var search = document.getElementById("search")
 var searchBtn = document.querySelector(".input-submit");
-search.addEventListener("input",function(){})
+var near_hot_search = document.querySelector(".near-hot-search");
+search.addEventListener("input",function(){
+  near_hot_search.style.opacity="0";
+  if(search.value === ""){
+    near_hot_search.style.opacity="1";
+  }
+})
 searchBtn.addEventListener("click",function(){
   if(search.value){
     axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
-      console.log(res)
+      // console.log(res.data.data)
+      window.open(`../public/details2.html?did=${res.data.data}`,"_self");
     }).catch(err=>{
       console.log(err);
     })
   }
 })
+search.addEventListener("keydown",function(e){
+  if(e.keyCode == 13){
+    if(search.value){
+      axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
+        // console.log(res.data.data)
+        window.open(`../public/details2.html?did=${res.data.data}`,"_self");
+      }).catch(err=>{
+        console.log(err);
+      })
+    }
+  }
+})
+
 
 
 
