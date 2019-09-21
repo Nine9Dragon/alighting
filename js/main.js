@@ -22,21 +22,23 @@ search.addEventListener("input",function(){
 })
 searchBtn.addEventListener("click",function(){
   if(search.value){
-    axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
-      window.open(`../public/details2.html?did=${res.data.data}`,"_self");
-    }).catch(err=>{
-      console.log(err);
-    })
+    window.open(`../public/category.html?title=${search.value}`,"_self")
+    // axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
+     
+    // }).catch(err=>{
+    //   console.log(err);
+    // })
   }
 })
 search.addEventListener("keydown",function(e){
   if(e.keyCode == 13){
     if(search.value){
-      axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
-        window.open(`../public/details2.html?did=${res.data.data}`,"_self");
-      }).catch(err=>{
-        console.log(err);
-      })
+      window.open(`../public/category.html?title=${search.value}`,"_self")
+      // axios.post("http://127.0.0.1:3000/product/searchDetail",`title=${search.value}`).then(res=>{
+       
+      // }).catch(err=>{
+      //   console.log(err);
+      // })
     }
   }
 })

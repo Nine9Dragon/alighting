@@ -278,3 +278,7 @@
     position: relative;
     z-index: 999;
 }
+.canvas{
+    position: relative;
+    z-index: 1;
+}

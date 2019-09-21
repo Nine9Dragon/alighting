@@ -43,7 +43,7 @@ axios.get("http://127.0.0.1:3000/product/details2",{params:data}).then(result=> 
     <div class="goods_price clearfix">
         <span>价格</span>
         <div>
-            <span>${result.data[0].price.toFixed(2)}</span>
+            <span>¥${result.data[0].price.toFixed(2)}</span>
         </div>
     </div>
     <div class="goods_place">

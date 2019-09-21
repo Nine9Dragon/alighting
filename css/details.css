@@ -593,3 +593,16 @@ a{
     border-right: 3px solid #FFF;
     z-index: 1000;
 }
+.big_img li {
+    width: 400px;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.big_img li img {
+    max-width: 400px;
+    max-height: 400px;
+    vertical-align: middle;
+}

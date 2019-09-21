@@ -81,12 +81,12 @@ router.get("/del",(req,res)=>{
 router.post("/searchDetail",(req,res)=>{
     var title = req.body.title;
     var title = `%${title}%`
-    var sql = "SELECT did FROM `alt_details` WHERE title LIKE ?"
+    var sql = "SELECT did,company,linkman,phone,watch,title,price,property,img FROM `alt_details` WHERE title LIKE ?"
     pool.query(sql,[title],(err,result)=>{
         if(err) throw err;
         if(result.length){
             console.log(result);
-            res.send({code:1,msg:"查询成功",data:result[0].did})
+            res.send({code:1,msg:"查询成功",data:result})
         }else{
             res.send({code:0,msg:"未找到商品"})
         }
